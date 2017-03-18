@@ -10,6 +10,9 @@
             #zuti_td {background : yellow}         
             .crvena {background: red}
             td.crvena {bacground: #666600}
+                 span,p, p div.drvena {background: #99ff99 !important;} 
+            #zuti_td {background: yellow}
+            .crvena {background: red}
         </style> 
     </head>
     <bod>
