@@ -186,7 +186,8 @@ require 'config/configuration.php';
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-navigation">
                     <span class="footer-secondary-title">POVRATAK NA VRH</span>
-                    <a href="#main-banner"><div class="footer-scroll-to-top"></div></a>
+                    <a href="#main-banner"><div class="footer-scroll-to-top"></div></a><br>
+                    <a href="http://info.flagcounter.com/phjx"><img src="http://s09.flagcounter.com/count/phjx/bg_333333/txt_EEEEEE/border_333333/columns_2/maxflags_8/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
                 </div>
              </div>
             </div>
