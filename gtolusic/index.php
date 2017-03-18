@@ -37,8 +37,11 @@
 	</tr>
 </table>
 
+<<<<<<< HEAD
 <br>
 <img src="http://www.srednja.hr/Photos/Razno/drve%C4%87e.jpg" alt="slika">
 
+=======
+>>>>>>> 0097b5c653b7b169c1368e4ca30ae42614ca2a3c
 </body>
 </html>
