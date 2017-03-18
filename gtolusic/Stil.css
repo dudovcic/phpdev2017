@@ -1,0 +1,12 @@
+body  {background-color: black;
+			color: white;}
+			h1 {color:red;}
+                        .crveno {background-color: red;
+                                 color: black;
+                                font-family: Arial;
+                        font-size: 30px}
+                        .zeleno {background-color: green;
+                                color: black;
+                                font-family: Arial;
+                                font-size: 30px}
+                        
