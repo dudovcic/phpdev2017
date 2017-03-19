@@ -37,7 +37,7 @@
 	</tr>
 </table>
 
-<img src="http://www.srednja.hr/Photos/Razno/drve%C4%87e.jpg0" alt="slika">
+<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQRGSCwcsybyqgniDBcEaSpimoODi_-2gbOn8pUljgwjVjMwtWlwaIGwdRv" alt="slika">
 
 </body>
 </html>
