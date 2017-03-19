@@ -7,6 +7,18 @@
   </head>
 
   <body>
+    <div id="nav">
+    <nav>
+      <ul>
+        <a href=""><li>Home</li></a>
+        <li><a href="">Random</a></li>
+        <li><a href="">Kontakt</a></li>
+
+      </ul>
+
+    </nav>
+
+</div>
     <div id="container">
 
       <div class="text">
@@ -17,18 +29,27 @@
       <div class="tablica">
         <table>
           <tr>
-            <td>Tekst u tablici</td>
-            <td>Tekst u tablici</td>
+            <td>Ime</td>
+            <td>Prezime</td>
+            <td>Mjesto</td>
           </tr>
 
           <tr>
-            <td>Tekst u tablici</td>
-            <td>Tekst u tablici</td>
+            <td>Ivan</td>
+            <td>Ivic</td>
+            <td>NY</td>
           </tr>
 
           <tr>
-            <td>Tekst u tablici</td>
-            <td>Tekst u tablici</td>
+            <td>John</td>
+            <td>Wick</td>
+            <td>Sydney</td>
+          </tr>
+
+          <tr>
+            <td>Dundo</td>
+            <td>Maroje</td>
+            <td>Dubrovnik</td>
           </tr>
         </table>
 
