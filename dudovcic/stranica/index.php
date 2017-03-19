@@ -12,7 +12,7 @@
       <ul>
         <a href=""><li>Home</li></a>
         <li><a href="">Random</a></li>
-        <li><a href="">Kontakt</a></li>
+<?php echo '<li><a href="">Kontakt</a></li>' ?>
 
       </ul>
 
