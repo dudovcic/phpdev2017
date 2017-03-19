@@ -1,0 +1,26 @@
+#container {
+  background-color: #eef;
+  border-radius: 16px;
+  height: 600px;
+  padding: 6px 12px;
+}
+
+
+.span {
+  color: blue;
+
+}
+
+
+table {
+  margin: 20px;
+}
+table, td, tr {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+#slika img {
+  width: 200px;
+}
