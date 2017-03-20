@@ -72,29 +72,27 @@ and open the template in the editor.
                 </div>
                 
                 <div class="liste">
-                <h3> Developer Skills </h3>
+                <h3> HTML5 Semantic </h3>
                 <ol>
-                    <li>html</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>programming language ( PHP, ASP, C++, Perl, Java)</li>
-                    <li>Improve your mobile support and SEO knowledge</li>
-                    <li>Learn how to administer a server</li>
-                    <li>Work on your design sense</li>
-                    <li>Develop your project management skills</li>
+                    <li>header</li>
+                    <li>nav</li>
+                    <li>section</li>
+                    <li>article</li>
+                    <li>aside</li>
+                    <li>footer</li>
+                    <li>figcaption</li>
+                    <li>main</li>
                 </ol>
                 </div>
                 <div class="liste">
-                <h3> Developer Skills </h3>
+                <h3>Essential skills for PHP developer</h3>
                 <ul style="list-style-type: circle">
-                    <li>html</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>programming language ( PHP, ASP, C++, Perl, Java)</li>
-                    <li>Improve your mobile support and SEO knowledge</li>
-                    <li>Learn how to administer a server</li>
-                    <li>Work on your design sense</li>
-                    <li>Develop your project management skills</li>
+                    <li>JavaScript, HTML, and CSS</li>
+                    <li>Knowing What You Don't Know</li>
+                    <li>Business Communication</li>
+                    <li>Business Finance</li>
+                    <li>Project Management</li>
+                    <li>Networking</li>
                 </ul>
                 </div>
              
