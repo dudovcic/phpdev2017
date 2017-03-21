@@ -99,58 +99,64 @@ require 'config/configuration.php';
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-1.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 1</a></td>
                                     <td>13.03.2017.</td>
-                                    <td><img src="<?= $completed; ?>"></td>
+                                    <td><img src="<?= $completed; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-2.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 2</a></td>
                                     <td>15.03.2017.</td>
-                                    <td><img src="<?= $completed; ?>"></td>
+                                    <td><img src="<?= $completed; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-3.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 3</a></td>
                                     <td>17.03.2017.</td>
-                                    <td><img src="<?= $completed; ?>"></td>
+                                    <td><img src="<?= $completed; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-4.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 4</a></td>
                                     <td>21.03.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-5.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 5</a></td>
                                     <td>23.03.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-6.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 6</a></td>
                                     <td>XX.XX.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-7.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 7</a></td>
                                     <td>XX.XX.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-8.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 8</a></td>
                                     <td>XX.XX.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-9.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 9</a></td>
                                     <td>XX.XX.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                                 <tr>
                                     <td><a onclick="new Ajax.Updater('table-lectures','predavanje-10.php',{method: 'get',asynchronous:true,evalScripts:true}); esperar('');" href="#table-lectures">Predavanje 10</a></td>
                                     <td>XX.XX.2017.</td>
-                                    <td><img src="<?= $notcompleted; ?>"></td>
+                                    <td><img src="<?= $notcompleted; ?>" alt="task"></td>
                                 </tr>
                             </tbody>
                         </table>
                    </div>
                 </div> 
             </div>
+        </div>
+    </section>
+    
+    <section id="youtube-video">
+      <div class="container">
+       <iframe width="100%" height="685" src="https://www.youtube.com/embed/HmtzpXWYYSg?list=PLFgUdubu2ofjuWm14mwzddzKTo5gqYvB3" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
     <!--END PREDAVANJE TABELA-->
@@ -166,7 +172,7 @@ require 'config/configuration.php';
                     <span class="footer-description"><a href="<?= $trello; ?>" target="_blank">- TRELLO</a></span>
                     <span class="footer-description"><a href="<?= $netbeans; ?>" target="_blank">- NETBEANS</a></span>
                     <span class="footer-description"><a href="<?= $xampp; ?>" target="_blank">- XAMPP</a></span>
-                    <span class="footer-description"><a href="<?= $heidisql; ?>"target="_blank">- HEIDISQL</a></span>
+                    <span class="footer-description"><a href="<?= $heidisql; ?>" target="_blank">- HEIDISQL</a></span>
                     <span class="footer-description"><a href="<?= $w3schools; ?>" target="_blank">- W3SCHOOLS</a></span>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-navigation">
@@ -183,6 +189,7 @@ require 'config/configuration.php';
                     <span class="footer-secondary-text">E-mail: <a href="mailto:mrvic.predrag@gmail.com">mrvic.predrag@gmail.com</a></span>
                     <span class="footer-secondary-text">Mob: 099/483-62-93</span>
                     <span class="footer-secondary-text">Mjesto: Osijek</span>
+                    <span class="googlemap"><iframe width="100%" max-height="360" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJU51XgannXEcRJvM5z_6bK8k&key=AIzaSyAs26sALxDKu_YhfGowDGTbg20-zeev7zw" allowfullscreen></iframe></span>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-navigation">
                     <span class="footer-secondary-title">POVRATAK NA VRH</span>
