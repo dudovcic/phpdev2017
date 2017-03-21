@@ -315,6 +315,11 @@ tr:nth-child(odd):hover{
     padding: 5px 0;
 }
 
+/* YOUTUBE VIDEO */
+#youtube-video{
+    margin-bottom: 15px;
+}
+
 /* FOOTER */
 
 #footer{
@@ -459,6 +464,10 @@ tr:nth-child(odd):hover{
     .main-banner-title{
         font-size: 38px;
         top:190px;
+    }
+    
+    #youtube-video{
+        display: none;
     }
     
     #footer{
