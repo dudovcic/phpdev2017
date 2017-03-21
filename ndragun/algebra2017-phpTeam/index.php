@@ -189,6 +189,7 @@ require 'config/configuration.php';
                     <span class="footer-secondary-text">E-mail: <a href="mailto:mrvic.predrag@gmail.com">mrvic.predrag@gmail.com</a></span>
                     <span class="footer-secondary-text">Mob: 099/483-62-93</span>
                     <span class="footer-secondary-text">Mjesto: Osijek</span>
+                    <span class="googlemap"><iframe width="100%" max-height="360" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJU51XgannXEcRJvM5z_6bK8k&key=AIzaSyAs26sALxDKu_YhfGowDGTbg20-zeev7zw" allowfullscreen></iframe></span>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 footer-navigation">
                     <span class="footer-secondary-title">POVRATAK NA VRH</span>
