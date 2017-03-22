@@ -3,15 +3,14 @@ echo "<br/>";echo "<br/>";
 
 echo "      Math ops";echo "<br/>";echo "<br/>";
 // Numeric ops
-
 // Int
-$a = 20;	
+$a = (int)20;	
 
 // Double
-$b = 33.2; 
+$b = (double)33.2; 
 
 
-$c = ( $a + $b) * ($b / $a);
+$c = (double)(( $a + $b) * ($b / $a));
 echo $c;    echo "<br/>";
 
 echo "<br/>";echo "<br/>";echo "<br/>";
