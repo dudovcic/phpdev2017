@@ -14,6 +14,10 @@
     <body>
         <p> Slova </p>
         <img src="http://gph.is/2noMs4k" alt="gif" style="width:200px;height:200px;">
+        <img src="https://giphy.com/gifs/3oKIPBub3ZZTyQfxrG/html5" alt="gif2" style="width:200px;height:200px;">
+        <img src="http://akademija.uns.ac.rs/wp-content/uploads/2012/03/slika2011.jpg" alt="ovoradi" style="width:200px;height:200px">
+             
+             <br>
         <table>
             <caption style="font-size:300%;">ŠOPING</caption>
             <tr>
