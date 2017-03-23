@@ -1,5 +1,5 @@
 <?php
-$a= 5;
+$a= 8;
 $b= 6.0;
 $c= $a / $b;
 echo "Rezultat je: $c <br>";
