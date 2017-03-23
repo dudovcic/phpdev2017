@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="style1.css">
         <style>
             table, th, td {border: 2px solid green;}
             th, td {padding: 5px;}
@@ -11,6 +12,8 @@
         <title>ŠOPING</title>
     </head>
     <body>
+        <p> Slova </p>
+        <img src="http://gph.is/2noMs4k" alt="gif" style="width:200px;height:200px;">
         <table>
             <caption style="font-size:300%;">ŠOPING</caption>
             <tr>
@@ -44,6 +47,17 @@
                 <th>2</th>
             </tr>
         </table>
-        
+        <ul style="list-style-type: square;">
+            <li>Coffe</li>
+            <li>Milk</li>
+            <li>Tea</li>
+        </ul>
+        <ol type="i">
+            <li>Kava</li>
+            <li>Mlijeko</li>
+            <li>Čaj</li>
+            <li>Voda</li>
+            <li>Jogurt</li>
+        </ol>
     </body>
 </html>
