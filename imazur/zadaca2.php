@@ -17,7 +17,23 @@ echo $c = ($a/$b);
 echo "<br>";
 echo $c = ($a%$b);
 echo "<br>";
-$c = (double) $c;
-        
+echo "<hr>";
 
-        
+$clubs = array ("cfc", "afc", "whu");
+
+$points = array ("chelsea"=>"65", "arsenal"=>"60", "westham"=>"50");
+
+print_r ("cfc");
+echo "<br>";
+print_r ("afc");
+echo "<br>";
+print_r ("whu");
+echo "<br>";
+print_r ($points);
+echo "<br>";
+echo count ($clubs);
+
+
+
+  
+?>
