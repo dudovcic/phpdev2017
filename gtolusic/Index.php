@@ -1,100 +1,60 @@
 <?php
 
-function plus() {
+//prvi zadatak
+$a= (int) 5;
+$b= (double) 6.5;
+$c= (double) ($a * $b) + ($a / $b) - ($a % $b);
+        echo $c;
+
+  echo "<br>";
     
- 
-$a=5;
-$b=5.5;
-$c= $a + $b;
-
-        var_dump($c);
-
-      }
-      
-      plus();
-      
-      function minus() {
+  //indexirani array
+   $indexarray = array ("Goran", "Tolusic", "Djakovo");
+   
+                 echo "<br>";
+                 
+                 //associjativni array
+                 
+           $indexarray2 = array ("1"=>"Goran", "2" =>"Tolusic", "3"=>"Djakovo");
     
- 
-$a=5;
-$b=5.5;
-$c= $a - $b;
+           echo "<br>";
+           
+           //pojedini članovi arraya
+           
+echo $indexarray2 ["1"];
 
-        var_dump($c);
+echo "<br>";
 
-      }
-      
-      minus();
-      
-      function puta() {
-    
- 
-$a=5;
-$b=5.5;
-$c= $a * $b;
+echo $indexarray2 ["3"];
 
-        var_dump($c);
+echo "<br>";
 
-      }
-      
-      puta();
-      
-      function kroz() {
-    
- 
-$a=5;
-$b=5.5;
-$c= $a / $b;
+//print cijelog arraya
 
-        var_dump($c);
+echo print_r ($indexarray);
 
-      }
-      
-      kroz();
-      
-      function posto() {
-    
- 
-$a=5;
-$b=5.5;
-$c= $a + $b;
+echo "<br>";
 
-        var_dump($c);
+echo print_r ($indexarray2);
 
-      }
-      
-      posto();
-      ?>
-<br>
-<?php
-      
-      
-   $indexarray = array ("Goran", "Tolusic", "Djakova");
-           echo "Ja se zovem " .$indexarray[0].", prezivam se " .$indexarray[1].", dolazim iz " .$indexarray[2].".";
-      ?>
-<br>
-<?php
-           $indexarray2 = array ("1"=>"Goran", "2" =>"Tolusic", "3"=>"Djakova");
-      echo "Ja se zovem " .$indexarray2[1].", prezivam se " .$indexarray2[2].", dolazim iz " .$indexarray2[3].".";
-?>
-<br>
-<?php
+echo "<br>";
+//duljina arraya
 
-$indexarray3 = array ("Goran", "Tolusic", "Djakova");
-echo "Ja se zovem " .$indexarray3[0]. " i dolazim iz " .$indexarray[2]. ". ";
-print_r (array_values($indexarray3));
-echo count($indexarray3);
-?> 
-<br>
-<?php
+echo count($indexarray);
 
-$ime="Ivo";
- $prezime="Anic";
+echo "<br>";
 
-        echo "Dobar dan ".$ime.", jeli vase prezime ".$prezime."?";
-         echo strlen("Dobar dan ".$ime.", jeli vase prezime ".$prezime."?");
-        
-        
+echo count($indexarray2);
 
-?>
+echo "<br>";
 
+//varijable ime i prezime i duljina stringa ispod
+$ime="Goran";
+ $prezime="Tolusic";
+ $recenica="Dobar dan ".$ime.", jeli vase prezime ".$prezime."?";
+ echo $recenica;
+ echo "<br>";
+
+ echo strlen ($recenica);
+
+ ?>
