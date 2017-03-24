@@ -32,6 +32,16 @@ echo "<br>";
 print_r ($points);
 echo "<br>";
 echo count ($clubs);
+echo "<hr>";
+
+$ime = "ivan";
+$prezime = "mazur";
+
+echo "koje ime je najčešće u obitelji ".$prezime;echo "?";
+echo "<br>".$ime;
+echo "<hr>";
+echo strlen ("Ivan Mazur");
+
 
 
 
