@@ -41,7 +41,9 @@ echo "koje ime je najčešće u obitelji ".$prezime;echo "?";
 echo "<br>".$ime;
 echo "<hr>";
 echo strlen ("Ivan Mazur");
+echo "<hr>";
 
+$num777;
 
 
 
