@@ -56,9 +56,15 @@ echo '<hr>';
 echo '<br>';
 
 /* Nagradni zadatak: Unijeti 777 random string članova arraya, ispisati svaki 5-ti */
+$ran= rand(0,777);
 
 
-
+$array = array_fill(0,5 ,$ran);
+for ($i = 0; $i < 777; ++$i) {
+    ++$array;/*[random_int(0, 777, -1)];*/
+}
+/*$rez=array($array);*/
+print_r($array);
 
 
 
