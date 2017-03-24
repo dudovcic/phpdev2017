@@ -20,11 +20,11 @@
                 <h1>Dobro došli na stranicu Algebra PHP- Zadaća</h1> <br>
                 <p class="naslov">Moje ime je Zlatko Iličić i kreirao sam ovu stranicu pokušavajući odraditi zadano  :</p>                
                 <ol type="1" class="tekst1">
-                 <li>Napraviti web stranicu</li><br><br>               
-                 <li>Napraviti tablicu</li><br><br>
-                 <li>Primjeniti nekoliko stilova</li><br><br>
-                 <li>Dodati nekoliko listi </li><br><br>
-                 <li>Dodati vanjsku *.css stylesheet datoteku</li><br><br>
+                 <li>Napraviti web stranicu</li>              
+                 <li>Napraviti tablicu</li>
+                 <li>Primjeniti nekoliko stilova</li>
+                 <li>Dodati nekoliko listi </li>
+                 <li>Dodati vanjsku *.css stylesheet datoteku</li>
                  <li>Dodati nekoliko slika ( slike ne uploadati nego koristiti vanjski izvor )</li>
                 </ol>
                 <br><br>
