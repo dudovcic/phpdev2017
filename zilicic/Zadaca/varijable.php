@@ -79,30 +79,15 @@ function rand_text(   $min = 10,
 
     for($i=0; $i < $varlen; $i++)
     {
-        $text .= substr($randtext, rand(1, $randtextlen), 1);
+        $text .= substr($randtext, rand(0, $randtextlen), 1);
         
     }
         return $text;
        
-           }
-       $counter($text)=0;
-        while ($counter < 778)  {
-            $counter++;
         }
-    $counter_slova=array(rand_text());
+         $counter_slova=array(rand_text());
+   
     print_r($counter_slova);
-/*echo rand_text(5,8);*/
-
-
-/*function counter() {
-static $count=1;
-return $count++;
-}
-for ($i=1; $i<777; $i++)
-{
-print counter();
-}
-$random */
 
 /* 
  * To change tis license header, choose License Headers in Project Properties.
