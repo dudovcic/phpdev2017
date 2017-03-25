@@ -56,19 +56,53 @@ echo '<hr>';
 echo '<br>';
 
 /* Nagradni zadatak: Unijeti 777 random string članova arraya, ispisati svaki 5-ti */
-$ran= rand(0,777);
-
-
-$array = array_fill(0,5 ,$ran);
-for ($i = 0; $i < 777; ++$i) {
-    ++$array;/*[random_int(0, 777, -1)];*/
+function counter(){
+  $count= rand(1, 777);
+  return $count++;
 }
-/*$rez=array($array);*/
-print_r($array);
+for ($i=1; $i<778; ++$i)
+{
+    $counter_chars=array(counter());
+            /*$array= array(counter);*/
+            print_r($counter_chars)   ;
+}
+
+/*----------------------------------------------------------------------*/
+function rand_text(   $min = 10,
+                      $max = 20,
+                      $randtext = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890' )
+{
+      
+    $varlen = rand($min,$max);
+    $randtextlen = strlen($randtext);
+    $text = '';
+
+    for($i=0; $i < $varlen; $i++)
+    {
+        $text .= substr($randtext, rand(1, $randtextlen), 1);
+        
+    }
+        return $text;
+       
+           }
+       $counter($text)=0;
+        while ($counter < 778)  {
+            $counter++;
+        }
+    $counter_slova=array(rand_text());
+    print_r($counter_slova);
+/*echo rand_text(5,8);*/
 
 
-
-
+/*function counter() {
+static $count=1;
+return $count++;
+}
+for ($i=1; $i<777; $i++)
+{
+print counter();
+}
+$random */
 
 /* 
  * To change tis license header, choose License Headers in Project Properties.
