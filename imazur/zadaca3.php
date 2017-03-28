@@ -29,10 +29,8 @@ print_r($studenti);
 echo "</pre>";
 
 
-echo ucwords($studenti);
-echo "<pre>";
-print_r($studenti);
-echo "</pre>";
+echo ucfirst("marko");
+
 
 
 
