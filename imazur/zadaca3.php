@@ -43,7 +43,7 @@ echo "</pre>";
 $sneparni = array();
 $sparni = array();
 foreach( $studenti as $key => $value ) {
-    if( 0 === $key%2) { //Even
+    if( 0 === $key%2) { 
         $sparni[] = $key;
     }
     else {
@@ -59,7 +59,15 @@ echo "</pre>";
 
 echo "<hr>";
 
-$temperature = array (1,2,5,9,12,13,15,19,22,32)
+$temperature = array ("1","2","5","9","12","13","15","19","22","32");
+print max ($temperature);
+echo "<br>";
+print min ($temperature);
+echo "<br>";
+echo $average_of_temperature = array_sum($temperature) / count($temperature);
+echo "<hr>";
+
+
 
 
 /* 
