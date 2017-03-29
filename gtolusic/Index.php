@@ -1,60 +1,42 @@
 <?php
-
-//prvi zadatak
-$a= (int) 5;
-$b= (double) 6.5;
-$c= (double) ($a * $b) + ($a / $b) - ($a % $b);
-        echo $c;
-
-  echo "<br>";
+//array studenti
+$student = array("domagoj", "ana", "ivo", "tomislav", "ivica", "ena", "zvonimir", "ivana", "zrinka", "marko");
+print_r($student);
+echo "<br>";
+//s manje od 5 znakova imena
+$b= array_filter($student,"petica");
+print_r($b);
+echo "<br>";
+function petica($x)
+{
+    if (strlen($x) < 5) {return ($x);}
     
-  //indexirani array
-   $indexarray = array ("Goran", "Tolusic", "Djakovo");
-   
-                 echo "<br>";
-                 
-                 //associjativni array
-                 
-           $indexarray2 = array ("1"=>"Goran", "2" =>"Tolusic", "3"=>"Djakovo");
+};
+//dodavanje 5 studenata
+array_push($student, "jurica", "anela", "dijana", "hana", "damir");
+print_r($student);
+echo "<br>";
+//sortiranje
+sort($student);
+print_r($student);
+echo "<br>";
+//ubijem zadnja 2
+array_pop($student);
+array_pop($student);
+print_r($student);
+echo "<br>";
+//s velikim slovima
+foreach ($student as $s) {
+    echo(ucfirst($s))."<br>";
+};
+echo "<br>";
+//temperature
+$temperatura= array (1,2,3,4,5,6,7,8,9,10);
+echo min($temperatura)."<br>";
+echo max($temperatura)."<br>";
+echo   array_sum($temperatura)/count($temperatura);
+
+//iskreno zadatak sa neparnim i parnim studentima nisam dobro shvatio. Jel parni moraju biti keyevi ili broj karaktera? :/
     
-           echo "<br>";
-           
-           //pojedini članovi arraya
-           
-echo $indexarray2 ["1"];
 
-echo "<br>";
-
-echo $indexarray2 ["3"];
-
-echo "<br>";
-
-//print cijelog arraya
-
-echo print_r ($indexarray);
-
-echo "<br>";
-
-echo print_r ($indexarray2);
-
-echo "<br>";
-//duljina arraya
-
-echo count($indexarray);
-
-echo "<br>";
-
-echo count($indexarray2);
-
-echo "<br>";
-
-//varijable ime i prezime i duljina stringa ispod
-$ime="Goran";
- $prezime="Tolusic";
- $recenica="Dobar dan ".$ime.", jeli vase prezime ".$prezime."?";
- echo $recenica;
- echo "<br>";
-
- echo strlen ($recenica);
-
- ?>
+?>
