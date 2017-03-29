@@ -4,8 +4,9 @@
 
 $a = (int)13;
 $b = (double)6.87237;
-echo print_r ('$c(double) = ');
-echo $c = ($a + $b) . ", " . ($a - $b) . ", " . ($a * $b) . ", " . ($a / $b) . ", " . ($a % $b);
+echo('c(double) = ');
+echo "<br>";
+echo "c =". ($a + $b) . ", " . ($a - $b) . ", " . ($a * $b) . ", " . ($a / $b) . ", " . ($a % $b);
   
 echo "<hr>";
 
