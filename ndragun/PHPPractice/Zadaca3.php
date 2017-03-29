@@ -12,16 +12,20 @@ $student = array("prvi"=>"alen",
                   "deveti"=>"karlo",
                   "deseti"=>"leonardo");
         
-foreach($student as $key=>$value)
+foreach($student as $key=>$value){
     
    echo $key. " u dnevniku je " .$value. "!<br>";
+}
 
 echo "<hr>";
 // Zadatak 2 - Pronaći sve studente čije ime je kraće od 5 znakova
 
 foreach($student as $studenti) {
+    
     if(strlen($studenti) < 5) 
+        
 	echo $studenti . "<br>";
+    
 }
 
 echo "<hr>";
@@ -29,9 +33,11 @@ echo "<hr>";
 // Zadatak 3 - Dodati još 5 studenata
 array_push($student, "marija", "stefan", "jurica", "kreso", "anica");
 
-foreach($student as $key=>$value)
+foreach($student as $key=>$value){
     
 echo "student/ica - " .$value. "!<br>";
+
+}
 
 echo "<hr>";
 
@@ -39,13 +45,16 @@ echo "<hr>";
 array_pop($student);
 array_pop($student);
 
-foreach($student as $studenti)
+foreach($student as $studenti){
 echo $studenti. "<br>";
+}
+
 echo "<hr>";
 
 // Zadatak 5 - Nad svakim studentom pozvati funkciju ucfirst() koja će postaviti prvo slovo veliko
-foreach($student as $studenti)
+foreach($student as $studenti){
 echo ucfirst($studenti). "<br>";
+}
 
 echo "<hr>";
 
@@ -73,10 +82,13 @@ foreach ($student as $br => $st) {
 }
 
 print_r($even);
+
 echo "<br/>";
+
 print_r($odd);
 
 echo "<hr>";
+
 // Zadatak 7 - Unijeti polje sa 10 temperatura. Pronaći manju, najveću i srednju temperaturu
 
 $temperatura = array(1,30,4,44,31,16,22,13,1,38,7);
