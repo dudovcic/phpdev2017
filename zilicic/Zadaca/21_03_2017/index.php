@@ -1,7 +1,7 @@
 <DOCTYPE html>
     <html>
         <heade>
-            <TITLE>Algebra PHP - Zadaća</TITLE>
+            <TITLE>Algebra PHP - Zadaca</TITLE>
             <link rel="stylesheet" type="text/css" href="Style.css">
         </heade>
         <body>
