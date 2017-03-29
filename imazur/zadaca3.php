@@ -57,6 +57,10 @@ echo "<pre>";
 print_r($sneparni);
 echo "</pre>";
 
+echo "<hr>";
+
+$temperature = array (1,2,5,9,12,13,15,19,22,32)
+
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
