@@ -1,43 +1,42 @@
-<!DOCTYPE html>
-<html lang="hr">
-<head>
-	<title> Moja testna web stranica za zadaću</title>
-	<meta charset="utf-8">
-        <link href="stil.css" rel="stylesheet">
-        
-</head>
+<?php
+//array studenti
+$student = array("domagoj", "ana", "ivo", "tomislav", "ivica", "ena", "zvonimir", "ivana", "zrinka", "marko");
+print_r($student);
+echo "<br>";
+//s manje od 5 znakova imena
+$b= array_filter($student,"petica");
+print_r($b);
+echo "<br>";
+function petica($x)
+{
+    if (strlen($x) < 5) {return ($x);}
+    
+};
+//dodavanje 5 studenata
+array_push($student, "jurica", "anela", "dijana", "hana", "damir");
+print_r($student);
+echo "<br>";
+//sortiranje
+sort($student);
+print_r($student);
+echo "<br>";
+//ubijem zadnja 2
+array_pop($student);
+array_pop($student);
+print_r($student);
+echo "<br>";
+//s velikim slovima
+foreach ($student as $s) {
+    echo(ucfirst($s))."<br>";
+};
+echo "<br>";
+//temperature
+$temperatura= array (1,2,3,4,5,6,7,8,9,10);
+echo min($temperatura)."<br>";
+echo max($temperatura)."<br>";
+echo   array_sum($temperatura)/count($temperatura);
 
+//iskreno zadatak sa neparnim i parnim studentima nisam dobro shvatio. Jel parni moraju biti keyevi ili broj karaktera? :/
+    
 
-<body>
-<h1>Ovo je naslov stranice</h1>
-<p class="crveno">Ovo je neki text</p>
-<div class="zeleno"><p>ovo je neki drugi tekst</p></div>
-<h2>Ovo je drugi naslov na stranici</h2>
-<p>ovo je neki treći tekst</p>
-<br>
-<ol>
-<li>jedan</li>
-<li>dva</li>
-<li>tri</li>
-</ol>
-<br>
-
-<table border="1">
-	<tr>
-	<th>Ime	</th>
-	<th>Prezime</th>
-	<th>Adresa</th>
-	<th>Dob</th>
-	</tr>
-	<tr>
-		<td>Goran</td>
-		<td>Tolušić</td>
-		<td>V. Nazora 93, Đakovo</td>
-		<td>30</td>
-	</tr>
-</table>
-
-<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQRGSCwcsybyqgniDBcEaSpimoODi_-2gbOn8pUljgwjVjMwtWlwaIGwdRv" alt="slika">
-
-</body>
-</html>
+?>
