@@ -35,6 +35,8 @@ $temperatura= array (1,2,3,4,5,6,7,8,9,10);
 echo min($temperatura)."<br>";
 echo max($temperatura)."<br>";
 echo   array_sum($temperatura)/count($temperatura);
+
+//iskreno zadatak sa neparnim i parnim studentima nisam dobro shvatio. Jel parni moraju biti keyevi ili broj karaktera? :/
     
 
 ?>
