@@ -22,11 +22,11 @@ echo "<br/>";echo "<br/>";
 
 function samoglasnici($tekst) {
     $bezs = "";
-	for ($i=0; $i<strlen($tekst); $i++) {  
-    	    if ( !(preg_match( "/[aeiou]/i" , $tekst[$i]  )) ) { 
-    	       $bezs .= $tekst[$i];
-    	    }
-	}  
+    for ($i=0; $i<strlen($tekst); $i++) {  
+    	if ( !(preg_match( "/[aeiou]/i" , $tekst[$i]  )) ) { 
+    	   $bezs .= $tekst[$i];
+    }  
+	    
     return $bezs;
 
 }
