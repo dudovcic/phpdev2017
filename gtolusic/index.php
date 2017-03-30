@@ -15,10 +15,11 @@ function hipo($x,$y) {
     
     //kvadrati iz arraya
     
-    $brojevi = array (2,4,5,6);
+    
    
    
-    function kvadrati($brojevi)  {      
+    function kvadrati($brojevi)  { 
+        
              foreach ($brojevi as $p){
     $kvadrat = $p*$p;
      print_r($kvadrat);
@@ -26,8 +27,8 @@ function hipo($x,$y) {
     
              }
     }
-    
-    kvadrati($brojevi);
+   $randombrojevi=array(15, 30, 78, 5, 6);
+   print_r(kvadrati($randombrojevi));
     
     //samoglasnici
    
