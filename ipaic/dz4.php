@@ -39,7 +39,7 @@
           return $recenica;
           
       }
-      $z="Jako dugacka recenica za testiranje.";
+      $z="Jako dugačka recenica za testiranje.";
       
       echo tekst($z);
       $f="Još jedna malo kraća";
