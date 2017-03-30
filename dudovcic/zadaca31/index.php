@@ -31,7 +31,7 @@ function samoglasnici($tekst) {
 
 }
 
-samoglasnici("Funkcija ce Izbaciti sve SAMOGlasnike nebitno jesu li 'upper/lower cAse' ");
+echo samoglasnici("Funkcija ce Izbaciti sve SAMOGlasnike nebitno jesu li 'upper/lower cAse' ");
 
 
 
