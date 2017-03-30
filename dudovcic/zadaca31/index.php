@@ -23,9 +23,9 @@ echo "<br/>";echo "<br/>";
 function samoglasnici($tekst) {
 
 	for ($i=0; $i<strlen($tekst); $i++) {  
-    	if ( preg_match( "/[aeiou]/i" , $tekst[$i]  ) ) { 
-    		echo $tekst[$i];
-    	}
+    	    if ( preg_match( "/[aeiou]/i" , $tekst[$i]  ) ) { 
+    	        echo $tekst[$i];
+    	    }
 	}  
 
 }
