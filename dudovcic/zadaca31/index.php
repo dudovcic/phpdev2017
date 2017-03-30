@@ -21,14 +21,13 @@ echo "<br/>";echo "<br/>";
 
 
 function samoglasnici($tekst) {
-    $bezs = "";
+    $bezsamoglasnika = ""; 
     for ($i=0; $i<strlen($tekst); $i++) {  
-    	if ( !(preg_match( "/[aeiou]/i" , $tekst[$i]  )) ) { 
-    	   $bezs .= $tekst[$i];
-    }  
-	    
-    return $bezs;
-
+        if ( !(preg_match( "/[aeiou]/i" , $tekst[$i])) ) { 
+            $bezsamoglasnika .= $tekst[$i];
+        }
+    }  	
+    return $bezsamoglasnika;
 }
 
 echo samoglasnici("Funkcija ce Izbaciti sve SAMOGlasnike nebitno jesu li 'upper/lower cAse' ");
