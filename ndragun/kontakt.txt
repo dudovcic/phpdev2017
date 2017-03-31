@@ -1,13 +1,3 @@
 Mob: 097/639-56-13
 Email: nemanjadragun@gmail.com
 
-<<<<<<< HEAD
-Test Kontakt
-
-Moja Test Promjena
-
-Test Promjena 2
-
-Test Promjena 3
-=======
->>>>>>> 5b0be546f88e427ff3ec6336d7b96c1dc261face
