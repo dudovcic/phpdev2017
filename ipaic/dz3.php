@@ -22,7 +22,7 @@ for($x=0;$x<count($faks);$x++) {
        array_pop($faks);
        echo"<br>";
        print_r($faks);
-       $faks = array_map('ucfirst', $faks);
+       array_map('ucfirst', $faks);
        echo"<br>";
        print_r($faks);
        $parni=array();
@@ -64,6 +64,8 @@ for($x=0;$x<count($faks);$x++) {
          }
          $mid=$mid/count($temp);
          echo "<br>","Najmanja temp je:".$min,"<br>","Najveca temp je:".$max,"<br>","Srednja temp je:".$mid;
+         
+                          
        
 ?>
 
