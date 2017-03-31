@@ -2,7 +2,7 @@
 $a=5.0;
 $b=6.0;
 $razlika=0;
-$y=2;
+
 function sum($c,$d)
 {
    return $c+$d;
