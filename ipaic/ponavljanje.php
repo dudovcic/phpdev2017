@@ -34,6 +34,7 @@ function umnozak($m)
 umnozak(5);
 umnozak(10);
 umnozak(4);
+umnozak(0);
 
 
 
