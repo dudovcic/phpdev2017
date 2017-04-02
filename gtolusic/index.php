@@ -1,48 +1,59 @@
 <?php
 
-//hipotenuza
-function hipo($x,$y) {
-        echo "ako je dužina prve katete:".$x. " i dužina druge katete:".$y." Onda je dužina hipotenuze:".hypot($x,$y);
-         
-    }
+
+function zbroj ($a, $b) {
     
-    hipo(6,7);
-    
+    $c=$a+$b;
+    echo $c;
     echo "<br>";
+}
+
+zbroj(3,4);
+
+
+function minus ($a, $b) {
+    
+    $c=$a-$b;
+    echo $c;
     echo "<br>";
+}
+
+minus(3,4);
+
+function puta ($a, $b) {
+    
+    $c=$a*$b;
+    echo $c;
     echo "<br>";
+}
+
+puta(3,4);
+
+function kroz ($a, $b) {
+    
+    $c=$a/$b;
+    echo $c;
     echo "<br>";
+}
+
+kroz(3,4);
+
+function sve($a,$b) {
     
-    //kvadrati iz arraya
+    $c= zbroj($a, $b);
+    echo $c;
     
+     $d=minus($a,$b);
+     echo $d;
+     
+        $e=puta($a,$b);
+     echo $e;
     
-   
-   
-    function kvadrati($brojevi)  { 
-        
-             foreach ($brojevi as $p){
-    $kvadrat = $p*$p;
-     print_r($kvadrat);
-              echo "<hr>";
-    
-             }
-    }
-   $randombrojevi=array(15, 30, 78, 5, 6);
-   print_r(kvadrati($randombrojevi));
-    
-    //samoglasnici
-   
-     $abc="ovo je samo sa malim suglasnicima";
-    echo samo($abc);
-   
-    function samo($recenica){
-                $samoglasnici=array ("q", "w", "r", "t", "z", "p", "š", "đ" ,"s", "d", "f", " ", "g", "h", "j", "k", "l","č", "ć", "ž", "x", "c","v","b","n","m");
-                
-                              
-        echo str_replace($samoglasnici,"", $recenica);
-        
-                    
-    }
-   
-  
+      $f=kroz($a,$b);
+     echo $f;
+     
+     
+}
+
+sve(6,7)
 ?>
