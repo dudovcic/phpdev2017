@@ -11,7 +11,8 @@ echo'<hr><br>';
 
 //Napraviti funkciju koja prima jednodimenzionalno polje i vraća polje kvadrata elemenata
   
-function poljeKvadrat($value){
+//verzija koja daje samo jednu vrijednost
+/*function poljeKvadrat($value){
    	$p = array($value);{
 		
 		foreach ($p as $key=> $value)
@@ -28,8 +29,17 @@ function poljeKvadrat($value){
 }
 }
 echo poljeKvadrat(5);
+*/
 
+//Ispravna verzija
+function poljeKvadrat($kvadrat)
+{
+    return($kvadrat * $kvadrat);
+}
 
+$a = array(1, 2, 3);
+$b = array_map("poljeKvadrat", $a);
+print_r($b);
 echo'<hr><br>';
 //Funkcija koja prima text i iz njega izbacuje sve samoglasnike
 
