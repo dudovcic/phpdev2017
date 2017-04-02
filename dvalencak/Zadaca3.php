@@ -27,6 +27,34 @@ print_r($listastudenata);
 
 echo "<br>"; echo "<hr>";
 
+// Zadatak 4 Sortirati studente po imenu
+
+echo "<br>";
+
+sort($listastudenata);
+
+print_r ($listastudenata);
+
+echo "<br>"; echo "<hr>";
+
+// Zadatak 5 Maknuti zadnja dva studenta
+
+echo "<br>";
+
+array_pop ($listastudenata);
+
+array_pop ($listastudenata);
+
+print_r ($listastudenata);
+
+echo "<br>"; echo "<hr>";
+
+// Zadatak 6 Nad svakim studentom pozvati funkciju ucfirst() koja će postaviti prvo slovo veliko
+
+
+
+
+
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
