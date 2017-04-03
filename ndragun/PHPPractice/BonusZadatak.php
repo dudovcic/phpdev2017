@@ -72,28 +72,24 @@ function inc_e()
 echo "<br/>";
 echo inc_e();
 
-// Static
+// Static (NOT COMPLETE)
 
-echo "<hr>";
 
-function test1()
-{
-    static $a = 5;
-    static $b = 6;
-    echo $a+$b;
-    echo "<br>";
-    echo $a-$b;
-    echo "<br>";
-    echo $a*$b;
-    echo "<br>";
-    echo $a/$b;
 
-}
-
-echo test1();
 
 // Refenrence
 
 echo "<hr>";
 
+function razl(&$var, $n=2){
+    
+    $var=$var-$n;
+}
 
+$x=25;
+$y=15;
+
+razl($x,$y);
+
+
+echo $x;
