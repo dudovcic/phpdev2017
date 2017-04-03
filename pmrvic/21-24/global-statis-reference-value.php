@@ -42,7 +42,6 @@ $a=56;
 $b=8;
 function dij() {
     global $a,$b;
-   // echo $a."".$b."aaaaa<br>";
     return $a /= $b;
 }
 printf("kvocijent od <b>a=%0.0f</b> i <b>b=%0.0f</b> je %f<br>", $a,$b, dij());
