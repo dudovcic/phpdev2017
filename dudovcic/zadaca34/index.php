@@ -14,7 +14,8 @@ function mno($a, $b) {
 	// Ne radi sa double, ali se sluzi sa static
 	static $brojac = 0;
 	static $total = 0;
-
+	
+	// Moze i "while"
 	if ( $brojac < $a ) {
 		$brojac++;
 		$total += $b;
