@@ -34,13 +34,24 @@ function razl(&$a, &$b) {
 
 
 
-function mno($a, $b) {
-	static $x ;
-	$x = $a;
-	static $y ;
-	$y = $b;
+function mno($a, $b) { 
+	static $proceed = true;
 
-	return $x * $y;
+	if ( $proceed == true ) {
+		$stringa = preg_replace("/0+\./", '', (string)$a);
+		$stringb = preg_replace("/0+\./", '', (string)$b);
+		$x = strlen($a)-2;
+		// $y = strlen($b)-2;
+		static $brojac = strlen($b)-2;
+
+		$umnozak = (double)((( (int)$stringa*(int)$stringb ) / 10**$x ) / 10**$y );
+
+
+		$proceed = false;
+	}
+
+	if ( $brojac < )
+		
 }
 
 
@@ -51,8 +62,8 @@ function dij() {
 	return $a / $b;
 }
 
-$a = 20;
-$b = 30;
+$a = 5;
+$b = 0.1;
 
 echo main("zbroj", $a, $b);
 echo "<br>";
