@@ -22,10 +22,11 @@ class Covjek{
     public $ime;
     private $prezime="Getto";
     
+    // default konstruktor iliti prva funkcija koju klasa poziva prilikom instanciranja
     function __construct($novoime=""){
     	$this->ime=$novoime;
     }
-
+// ENkapculacija private -> public
 	function set_ime($ime){
 		$this->ime= ucfirst($ime);
 	}
@@ -39,7 +40,8 @@ class Covjek{
 		return $this->prezime;
 	}
 	function __destruct(){
-	//	 echo "<br>nema više objekta zvanog ".$this->ime;
+// ovo radi ali mi previse ispisuje po ekranu	
+//echo "<br>nema više objekta zvanog ".$this->ime;
 	}
 
 
