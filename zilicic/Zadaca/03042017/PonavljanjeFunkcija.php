@@ -6,12 +6,14 @@ function zbroj($a,$b)
     return $sum;
     }
     
-function oduzmi($a,$b)
+function oduzmi(&$prvi, &$drugi)
 {
-    return $a-$b; 
-}
-$a=6;
-$b=2;
+     $prvi-=$drugi; 
+   }
+   
+
+$a=30;
+$b=6;
 function dij()
 {
     global $a;
@@ -34,17 +36,18 @@ while($b>0){
    if ($b <= 0) {
         return $z;     
             }
-            
+          mno($a,$b);  
            }
 
-$izbornik='mno';
+$izbornik='oduzmi';
 switch($izbornik){
-case 'zbroj';    echo 'Rezultat nakon zbrajanja je :'.zbroj(2, 3);
+case 'zbroj';    echo 'Rezultat nakon zbrajanja je :'.zbroj(5, 6);
     break;
-case 'oduzmi';    echo 'Rezultat nakon oduzimanja je :'. oduzmi(2, 3);
+case 'oduzmi';    echo 'Rezultat nakon oduzimanja je :'. oduzmi(25,15);
     break;
 case 'dij';    echo 'Rezultat nakon dijeljenja je :'. dij();
     break;
+
 case 'mno';    echo 'Umnozak je :'. mno(5,7);
     break;
 }
