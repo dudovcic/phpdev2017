@@ -1,12 +1,11 @@
 <?php
-$zbroj=0;
-for ($i=20; $i<=30;$i++)
-{
-   
-    $zbroj=$zbroj+ $i;
-    echo $zbroj;
-         
-}
 
-echo $zbroj;
+//malo vježbe
+$polje=array ('5'=>"da", "ne", "ili");
+array_push($polje, "golub");
+print_r($polje);
+echo count($polje);
+array_push($polje, "golubar");
+print_r($polje);
+echo count($polje);
 ?>
