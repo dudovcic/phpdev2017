@@ -5,18 +5,18 @@ function main($oper, &$a, &$b) {
 
 	switch($oper) {
 		case "zbroj":
-			return zbr($a, $b);
+                    echo zbr($a, $b);
 			break;
 		case "razlika":
-			return razl($a, $b);
+			echo razl($a, $b);
 			break;
 		case "umnozak":
-			return mno($a, $b);
+			echo mno($a, $b);
 			break;
 		case "podjela":
-			return dij();
+			echo dij();
 			break;
-		default: return "Incorrect operation";
+		default: echo "Incorrect operation";
 
 	}
 }
@@ -33,7 +33,7 @@ function razl(&$a, &$b) {
 }
 
 
-
+/*
 function mno($a, $b) { 
 	static $proceed = true;
 
@@ -53,7 +53,7 @@ function mno($a, $b) {
 	if ( $brojac < )
 		
 }
-
+*/
 
 
 function dij() {
@@ -65,12 +65,12 @@ function dij() {
 $a = 5;
 $b = 0.1;
 
-echo main("zbroj", $a, $b);
+main("zbroj", $a, $b);
 echo "<br>";
-echo main("razlika", $a, $b);
+main("razlika", $a, $b);
 echo "<br>";
-echo main("podjela", $a, $b);
+main("podjela", $a, $b);
 echo "<br>";
-echo main("umnozak", $a, $b);
+//echo main("umnozak", $a, $b);
 
  ?>
