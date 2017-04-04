@@ -1,15 +1,12 @@
 <?php
-
-
-function potencija (&$val) {
-    
-    $val=$val+$val;
-    
-    
+$zbroj=0;
+for ($i=20; $i<=30;$i++)
+{
+   
+    $zbroj=$zbroj+ $i;
+    echo $zbroj;
+         
 }
 
-$a=4;
-
-potencija($a);
-echo $a;
+echo $zbroj;
 ?>
