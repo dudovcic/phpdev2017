@@ -1,7 +1,6 @@
 <?php
 
 
-
 function zbr( $a, $b ) {
 	return $a+$b;
 }
