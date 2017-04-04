@@ -5,16 +5,16 @@ function main($oper, &$a, &$b) {
 
 	switch($oper) {
 		case "zbroj":
-			return zbr($a, $b);
+			echo zbr($a, $b);
 			break;
 		case "razlika":
-			return razl($a, $b);
+			echo razl($a, $b);
 			break;
-		case "umnozak":
-			return mno($a, $b);
-			break;
+		// case "umnozak":
+		// 	return mno($a, $b);
+		// 	break;
 		case "podjela":
-			return dij();
+			echo dij();
 			break;
 		default: return "Incorrect operation";
 
@@ -34,25 +34,25 @@ function razl(&$a, &$b) {
 
 
 
-function mno($a, $b) { 
-	static $proceed = true;
+// function mno($a, $b) { 
+// 	static $proceed = true;
 
-	if ( $proceed == true ) {
-		$stringa = preg_replace("/0+\./", '', (string)$a);
-		$stringb = preg_replace("/0+\./", '', (string)$b);
-		$x = strlen($a)-2;
-		// $y = strlen($b)-2;
-		static $brojac = strlen($b)-2;
+// 	if ( $proceed == true ) {
+// 		$stringa = preg_replace("/0+\./", '', (string)$a);
+// 		$stringb = preg_replace("/0+\./", '', (string)$b);
+// 		$x = strlen($a)-2;
+// 		// $y = strlen($b)-2;
+// 		static $brojac = strlen($b)-2;
 
-		$umnozak = (double)((( (int)$stringa*(int)$stringb ) / 10**$x ) / 10**$y );
+// 		$umnozak = (double)((( (int)$stringa*(int)$stringb ) / 10**$x ) / 10**$y );
 
 
-		$proceed = false;
-	}
+// 		$proceed = false;
+// 	}
 
-	if ( $brojac < )
+// 	if ( $brojac < )
 		
-}
+// }
 
 
 
@@ -65,12 +65,12 @@ function dij() {
 $a = 5;
 $b = 0.1;
 
-echo main("zbroj", $a, $b);
+main("zbroj", $a, $b);
 echo "<br>";
-echo main("razlika", $a, $b);
+main("razlika", $a, $b);
 echo "<br>";
-echo main("podjela", $a, $b);
+main("podjela", $a, $b);
 echo "<br>";
-echo main("umnozak", $a, $b);
+// echo main("umnozak", $a, $b);
 
  ?>
