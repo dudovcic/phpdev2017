@@ -2,7 +2,6 @@
 
 $a=5;
 $b=6;
-
 function zbroj($a, $b){
     return $a+$b;
 }
@@ -14,7 +13,6 @@ function razlika($a, $b){
 function umnozak($a, $b){
     return $a*$b;
 }
-
 
 function dijeljenje($a, $b){
     return $a/$b;
@@ -43,6 +41,7 @@ function inc_a()
 }
 
 echo "<br/>";
+
 echo inc_a();
 
 function inc_b()
@@ -52,6 +51,7 @@ function inc_b()
 }
 
 echo "<br/>";
+
 echo inc_b();
 
 function inc_d()
@@ -61,6 +61,7 @@ function inc_d()
 }
 
 echo "<br/>";
+
 echo inc_d();
 
 function inc_e()
@@ -70,12 +71,26 @@ function inc_e()
 }
 
 echo "<br/>";
+
 echo inc_e();
 
-// Static (NOT COMPLETE)
+echo "<hr>";
 
+// Static
 
+function mno($a, $b) { 
+	static $z = 0;
+	static $t = 0;
+	
+	while ( $z < $a ) {
+		$z++;
+		$t += $b;
+		mno($a, $b);
+	}
+	return $t;
+}
 
+echo mno(4,5);
 
 // Refenrence
 
@@ -85,11 +100,13 @@ function razl(&$var, $n=2){
     
     $var=$var-$n;
 }
+$x=25;
+$y=15;
+razl($x,$y);
 
 $x=25;
 $y=15;
 
 razl($x,$y);
-
 
 echo $x;
