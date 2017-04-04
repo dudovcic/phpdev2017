@@ -17,7 +17,7 @@ function glasanje(){
 }
 
 
-class Covjek{
+class Covjek implements Ikupac{
 	// var $ime="moje defaoultno ime";
     public $ime;
     private $prezime="Getto";
@@ -44,6 +44,9 @@ class Covjek{
 //echo "<br>nema više objekta zvanog ".$this->ime;
 	}
 
+    public function ispis() {
+        echo "hello ja sam ispis() iz COvjek klase";
+    }
 
 }
 
@@ -63,8 +66,9 @@ function __construct($novo_ime){
   parent::__construct($novo_ime);
   $this->id_kupca=1234;
 }
-function ispis(){
 
+function ispis(){
+    parent::ispis();
 	echo "<br>+++++ ".$this->ime." ima id:".$this->id_kupca." a potrosio je:".$this->potroseni_iznos;
 
 }

@@ -28,3 +28,5 @@ echo "<br>dobra dan zovem se "
 
 $k1=new Kupac('Ljubica');
 echo "<br>ja sam kupac i zovem se:" .$k1->get_ime();
+
+$k1->ispis();
