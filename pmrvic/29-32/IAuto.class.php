@@ -15,6 +15,7 @@ interface IAuto {
     function stani();
     function skreni();
     function gazi();
+    function pali();
 }
 
 

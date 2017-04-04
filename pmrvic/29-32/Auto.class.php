@@ -14,6 +14,10 @@
 include 'IAuto.class.php';
 
 abstract class Auto implements IAuto{
+    var $brojvrata=5;
+    var $kilovata=100;
+    var $boja="crna";
+    
     //put your code here
     public function gazi() {
         echo "<br>Gazim!";
@@ -30,5 +34,7 @@ abstract class Auto implements IAuto{
     public function vozi() {
         echo "<br>vozim!";
     }
-
+    public function pali() {
+        // makar bila prazna
+    }
 }

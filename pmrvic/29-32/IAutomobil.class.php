@@ -12,4 +12,5 @@
  */
 interface IAutomobil {
    function get_model(); // vraća npr, Honda, Mazda
+   function ispis(); // kompletan ispis svih svojstava
 }
