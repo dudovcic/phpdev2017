@@ -47,7 +47,8 @@ case 'oduzmi';    echo 'Rezultat nakon oduzimanja je :'. oduzmi(25,15);
     break;
 case 'dij';    echo 'Rezultat nakon dijeljenja je :'. dij();
     break;
-case 'mno';    echo 'Umnozak je :'. mno(4,5);
+
+case 'mno';    echo 'Umnozak je :'. mno(5,7);
     break;
 }
 
