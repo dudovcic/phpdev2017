@@ -1,2 +1,8 @@
 Mob: 0915853251
 Email: axelfoley@net.hr
+<<<<<<< HEAD
+123
+456
+789
+=======
+>>>>>>> f39a466d97453baf8e4a8ea779ced4b8dd2f737a
