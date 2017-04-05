@@ -9,8 +9,13 @@
 
     
         <h1 style ="color:blue;text-align:center" >osijek</h1>
-           
-    
+  
+            
+<?php
+echo '<i style="color:white;font-size:30px;font-family:tahoma;">
+       grad na dravi </i> ';
+echo "<br>";
+?>    
 <br>
 
 
