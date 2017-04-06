@@ -11,20 +11,39 @@
  *
  * @author Korisnik
  */
-include 'Proizvodi.class.php';
-class ProizvodFactory {
-    //put your code here
 
-  public static function build($naziv, $vrsta)
+class ProizvodFactory {
+    
+  public static function create($naziv)
   {
     $proizvodi = 'Proizvodi.class.php';
     if(class_exists($proizvodi))
     {
-      return new $proizvodi($naziv,$vrsta);
+      return new $proizvodi($naziv);
     }
     else { 
-      throw new Exception("Netocan naziv proizvoda.");
+      throw new Exception("Nije moguce kreirati!!");
     }
   }
     
 }
+
+/*
+// Singleton class
+
+#final class ProizvodFactory{
+
+    
+  /*  public static function Instance()
+    {
+        static $inst = null;
+        if ($inst === null) {
+            $inst = new ProizvodFactory();
+        }
+        return $inst;
+    }
+
+  */
+   
+
+
