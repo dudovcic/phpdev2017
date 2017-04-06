@@ -4,7 +4,15 @@
 
 $filename = "ucenici.txt";
 
-$handle = fopen ($filename, "r");
+$datoteka = file ($filename);
+foreach ($datoteka as $line_num=> $line) {
+    echo "Linija #<b>".$line_num."</b>: ".$line."<br/>";
+}
+
+
+/*
+
+
 $contents = fread ($handle, filesize($filename));
 fclose($handle);
 
