@@ -71,7 +71,7 @@ echo "<br>";
 echo $average_of_temperature = array_sum($temperature) / count($temperature);
 echo "<hr>";
 
-//"zadatak jedan-ne valja-treba foreach, par-nepar je prekomplicirano-
+//"zadatak jedan-ne valja-treba foreach---NAPRAVLJENO!, par-nepar je prekomplicirano-
 //--nemoj koristiti stvari koje ne razumiješ i nismo radili iliti ugnježdene funkcije";
 
 

@@ -52,13 +52,15 @@ if  ($ff<$f) {
 }
 return $gg;
 
-
-//količnik            
+       
     
 }
 echo mno (4,5);
 
 echo "<hr>";
+
+//količnik 
+
 $aa=30;
 $bb=6;
 function dij()
