@@ -10,26 +10,28 @@ foreach ($datoteka as $line_num=> $line) {
 }
 
 
-/*
 
-
-$contents = fread ($handle, filesize($filename));
-fclose($handle);
-
-echo $contents;
 
 echo "<hr>";
 
 
 //zad2
+echo ' < form method= "post" action="">
+Tekst: <input type="text" name="txt" value=""/><br/>
+<input type="submit" name="button" value="spremi" />
+</form>';
+
+if(isset($_POST["button"]))
+{
 $filenamee = "profesori.txt";
 
-$handlee = fopen ($filenamee, "w+");
-$contentss = fwrite ($handlee, "Maja Maja");
+$handlee = fopen ($filenamee, "a+");
+fwrite ($handlee, "Maja Maja");
 fclose($handlee);
+}
 
-echo $contentss;
-
+/*
+if(isset($_POST["btn"]))
 /* 
  * To change this license$handle, filesize header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
