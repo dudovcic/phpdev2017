@@ -1,8 +1,8 @@
 <html>
     <head>
         <style>
-          tr:nth-child {even}{background}: #ffcccc}
-          tr:nth-child{odd}{background}: #9999ff}
+          tr:nth-child(even){background: #ffcccc}
+          tr:nth-child(odd){background: #9999ff}
           p {background: #99ff99}
         </style>
     </head>
