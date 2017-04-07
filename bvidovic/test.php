@@ -11,12 +11,21 @@
 
 
 print_r($data);
+echo "<br>";
+echo "<br>";
 
 echo "<table border 1px>";
-    foreach ($data as $red) 
+  echo"<tr>";
+  echo"<th>RBR</th>";
+  echo"<th>IME</th>";
+  echo"<th>PREZIME</th>";
+  echo"<th>DATUM</th>";
+  echo"<th>PLACENO</th>";
+echo "</tr>";
+    foreach ($data as $key =>$red) 
     { 
         echo '<tr>';
-        
+        echo '<th>' . $key . '</th>';
         echo '<td>' . $red['ime'] . '</td>';
         echo '<td>' . $red['prezime'] . '</td>';
         echo '<td>' . $red['datum'] . '</td>';
