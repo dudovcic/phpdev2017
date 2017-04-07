@@ -11,11 +11,36 @@
 
 
 print_r($data);
-foreach($data as $value)
+
+echo "<table border 1px>";
+    foreach ($data as $red) 
+    { 
+        echo '<tr>';
+        
+        echo '<td>' . $red['ime'] . '</td>';
+        echo '<td>' . $red['prezime'] . '</td>';
+        echo '<td>' . $red['datum'] . '</td>';
+        echo '<td>'; 
+         echo "<select name=izbornik>";
+         echo "<option value=da>da</option>";
+         echo "<option value=ne>ne</option>";
+         echo "</select>";
+         echo "</form>";
+         echo  '</td>';
+
+        echo '</tr>';
+    }     
+
+echo "</table>";
+echo"<br>";
+$data[1]["datum"] = "2011-03-01";
+
+function date_trans($date)
 {
-    echo $value;
+  return date ('d.m.Y',strtotime($date));
 }
 
+echo $final = date_trans($data[1]["datum"]);
 /*for($i=0; $i<count($data); $i++)
 {
     echo $data[$i];
@@ -35,14 +60,22 @@ foreach($data as $value)
     echo '<td>'.$item[2].'</td>';
     echo '</tr>';
 */
+  
+  
+  
         
         
          
         
+     echo "<br>";
+     echo "<br>";
+     echo "<br>";
+     echo "<br>";
+     echo "<br>";
      
      ?>     
         
-       
+ 
    <table border='1'>
    <tr>
        <th>rbr</th>
