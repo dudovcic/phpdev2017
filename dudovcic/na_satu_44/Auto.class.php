@@ -1,5 +1,7 @@
 <?php
 
+include "IAuto.php";
+
 abstract class Auto implements IAuto {
 
 function vozi() {

@@ -1,16 +1,17 @@
 <?php 
 
-
+include "IAutomobil.php";
+include	"Auto.class.php";
 
 class Automobil extends Auto implements IAutomobil {
 
-	private static $model;
+	var $model;
 
 	function set_model($model) {
-		$this->$model = $model;
+		$this->model = $model;
 	}
 	function get_model() {
-		echo $model;
+		echo $this->model;
 	}
 
 }

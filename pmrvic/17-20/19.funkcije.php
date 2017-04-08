@@ -23,7 +23,6 @@ echo "Ovo je neki probni timestamp:".date('l dS \o\f F Y h:i:s A',strtotime('25-
 
 function kvadrat($x){
     return $x*$x;
-    return $x+5895145;
 }
 echo kvadrat(kvadrat(5));
 

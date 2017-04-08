@@ -5,10 +5,20 @@ function main($oper, &$a, &$b) {
 
 	switch($oper) {
 		case "zbroj":
+<<<<<<< HEAD
 			echo zbr($a, $b);
 			break;
 		case "razlika":
 			echo razl($a, $b);
+=======
+                    echo zbr($a, $b);
+			break;
+		case "razlika":
+			echo razl($a, $b);
+			break;
+		case "umnozak":
+			echo mno($a, $b);
+>>>>>>> 1f5d63447a6e3fb88a3cec8f4748472dae9d767d
 			break;
 		// case "umnozak":
 		// 	return mno($a, $b);
@@ -16,7 +26,7 @@ function main($oper, &$a, &$b) {
 		case "podjela":
 			echo dij();
 			break;
-		default: return "Incorrect operation";
+		default: echo "Incorrect operation";
 
 	}
 }
@@ -33,9 +43,15 @@ function razl(&$a, &$b) {
 }
 
 
+<<<<<<< HEAD
 
 // function mno($a, $b) { 
 // 	static $proceed = true;
+=======
+/*
+function mno($a, $b) { 
+	static $proceed = true;
+>>>>>>> 1f5d63447a6e3fb88a3cec8f4748472dae9d767d
 
 // 	if ( $proceed == true ) {
 // 		$stringa = preg_replace("/0+\./", '', (string)$a);
@@ -52,8 +68,13 @@ function razl(&$a, &$b) {
 
 // 	if ( $brojac < )
 		
+<<<<<<< HEAD
 // }
 
+=======
+}
+*/
+>>>>>>> 1f5d63447a6e3fb88a3cec8f4748472dae9d767d
 
 
 function dij() {
@@ -71,6 +92,10 @@ main("razlika", $a, $b);
 echo "<br>";
 main("podjela", $a, $b);
 echo "<br>";
+<<<<<<< HEAD
 // echo main("umnozak", $a, $b);
+=======
+//echo main("umnozak", $a, $b);
+>>>>>>> 1f5d63447a6e3fb88a3cec8f4748472dae9d767d
 
  ?>
