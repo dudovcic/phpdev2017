@@ -14,16 +14,17 @@ echo "Pomocu varijabli /".'<br>'.'Dobar dan ! Moje ime je '.$ime.' '.$prezime.'.
 echo '
 <table border="1">
 		<tr>
-		<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
+		<td>Prva</td>
+		<td>druga</td>
+		<td>treca</td>
+		<td>cetvrta</td>
 		</tr>
 <tr>
-	<th></th>
-		<th></th>
-		<th></th>
-		<th></th>
+	
+		<td>prvi</td>
+		<td>drugi</td>
+		<td>treci</td>
+                <td>cetvrta</td>
 </tr>
 
 </table> ';
@@ -65,7 +66,7 @@ echo $a*$b.'<br/>';
 echo $a/$b.'<br/>';
 echo $a%$b.'<br/>';
 echo '<hr>';
-//-----------------------------
+//-------------------------------------------------------------
 
 $a=4;
 $b=2;
@@ -145,8 +146,108 @@ foreach($imena2 as $key=>$value)
 				}
 	echo '<hr>';
 //---------------------------------------------------------------------------------
-	
-	
+	function hr_mjesec($mj)
+        {
+            $mjesec=array();
+            $mjesec[1]="Sjecanj";
+            $mjesec[2]="Veljača";
+            $mjesec[3]="Ožujak";
+            $mjesec[4]="Travanj";
+            $mjesec[5]="Svibanj";
+            $mjesec[6]="Lipanj";
+            $mjesec[7]="Srpanj";
+            $mjesec[8]="Kolovoz";
+            $mjesec[9]="Rujan";
+            $mjesec[10]="Listopad";
+            $mjesec[11]="Studeni";
+            $mjesec[12]="Prosinac";
+            
+            return $mjesec[$mj];
+          
+        }
+        $mj=date('n');
+   echo hr_mjesec($mj); 
+   
+   echo '<hr>';
+   function ispisi_tablicu($imenaArray)
+   {
+   echo'
+       <table border="1">
+       <tr>
+<th>Ime</th>
+<th>Prezime</th>
+</tr>';
+   foreach ($imenaArray as $key=>$ucenik)
+   {
+       echo '
+       <tr>
+       <td>'.$ucenik["ime"].'</td>
+           <td>'.$ucenik["prezime"].'</td>
+       </tr>';
+          } 
+   echo '</table>';
+   }
+   $ucenici=array();
+           $ucenici[1]["ime"]="Stjepan";
+           $ucenici[1]["prezime"]="Iličić";
+           echo ispisi_tablicu($ucenici);
+           
+           echo '<hr>';
+           
+           function zbroji($a,$b)
+           {
+            return   $a+=$b;
+           }
+           function oduzmi($a,$b)
+           {
+               return $a-=$b;
+           }
+          //drugi nacin
+          /* function oduzmi_2(&$a, &$b)
+           {
+               return $a-=$b;
+               
+           }
+           $a=2;
+           $b=4;
+           oduzmi_2($a,$b); */
+         function umnozak($a,$b)
+         {
+             return $a*$b;
+         }
+         function dijeli($a,$b)
+         {
+            return  $a/$b;
+         }
+         function prikazi($a,$b)
+         
+         {
+            echo 'Rezultat zbrajanja je : '. zbroji($a,$b).'<br/>';
+            echo 'Rezultat oduzimanja je: '.oduzmi($a,$b).'<br/>';
+            echo 'Rezultat mnozenja je: '.umnozak($a,$b).'<br/>';
+            echo 'Rezultat dijeljenja je: '.dijeli($a,$b).'<br/>';
+         }
+         $a=4;
+         $b=2;
+         
+         prikazi($a,$b);
+         echo '<hr>';
+         
+         function varijabilne()
+         {
+             $vrijednost= func_get_args();
+             foreach ($vrijednost as $vrij)
+             {
+                 if(is_int($vrij))
+                 {    echo 'Vrijednost je broj: '.$vrij.'<br/>';
+                 }
+                 else 
+                     {
+                     echo 'Vrijednost je tekst: '.$vrij.'<br/>';
+                 }
+             }
+         }
+         echo varijabilne(13,"Algebra",111);
 ?>
 </body>
 
