@@ -5,10 +5,12 @@ function main($oper, &$a, &$b) {
 
 	switch($oper) {
 		case "zbroj":
+
 			echo zbr($a, $b);
 			break;
 		case "razlika":
 			echo razl($a, $b);
+=======
 			break;
 		// case "umnozak":
 		// 	return mno($a, $b);
@@ -16,7 +18,7 @@ function main($oper, &$a, &$b) {
 		case "podjela":
 			echo dij();
 			break;
-		default: return "Incorrect operation";
+		default: echo "Incorrect operation";
 
 	}
 }
@@ -34,8 +36,10 @@ function razl(&$a, &$b) {
 
 
 
+
 // function mno($a, $b) { 
 // 	static $proceed = true;
+
 
 // 	if ( $proceed == true ) {
 // 		$stringa = preg_replace("/0+\./", '', (string)$a);
@@ -52,7 +56,6 @@ function razl(&$a, &$b) {
 
 // 	if ( $brojac < )
 		
-// }
 
 
 
@@ -71,6 +74,6 @@ main("razlika", $a, $b);
 echo "<br>";
 main("podjela", $a, $b);
 echo "<br>";
-// echo main("umnozak", $a, $b);
+
 
  ?>

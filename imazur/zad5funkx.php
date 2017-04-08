@@ -1,4 +1,6 @@
 <?php
+
+//predavanje-primjer
 function inc_a()
 { 
   static $a=0;
@@ -11,69 +13,9 @@ inc_a();
 inc_a();
 echo "<hr>";
 
-//zad 3 str 85
-$a=2;
-$b=2;
-function zbroj()
-{
-    global $a;
-    global $b;
-    $z= ($a+$b);
-    echo $z;
-    
-}
-echo zbroj ();
-echo "<hr>";
-function razlika()
-{
-    static $a=2;
-    static $b=2;
-    $z= ($a-$b);
-    echo $z;
-    
-}
-echo razlika ();
-
-echo "<hr>";
-function umnozak(&$umn)
-{
-    $umn = $umn*$umn;
-    
-      
-}
-$v =2;
-   
-    umnozak ($v);
-    echo $v;
-    
-echo "<hr>";
-function kol($k, $l)
-{
-     return ($k/$l);
-    
- 
- }
- 
-    print_r (kol (2,2));
-    echo "<hr>" ;
-    
-function funkcije ($a, $b){
-    echo zbroj ($a, $b);
-    echo razlika ($a, $b);
-    echo umnozak ($a, $b);
-    echo kol ($a, $b);
-    
-}
-$e=9;
-$r=3;
-
-funkcije ($e, $r); 
-
-echo "<hr>" ;
-echo "<hr>" ;
-echo "<hr>" ;
-
 //zadaća
+
+//zbroj
 
 function zbr ($w, $q) {
 return $w+$q;
@@ -84,17 +26,37 @@ echo zbr($w, $q);
 echo "<hr>" ;
 
 
+//razlika
 
+function razl(&$c, &$n) {
+	$c -= $n;
+       
+}
+$c = 25;
+$n = 15;
+razl($c, $n); 
+echo $c;
 echo "<hr>" ;
-function mno()
+
+
+//umnožak
+
+function mno($f, $g)
 {
-    static $f=4;
-    static $g=5;
-    $h= ($f*$g);
-    echo $h;
+    static $ff=0;
+    static $gg=0;
+if  ($ff<$f) {
+    $ff++;
+    $gg+=$g;
+    mno($f, $g);
+}
+return $gg;
+
+
+//količnik            
     
 }
-echo mno ();
+echo mno (4,5);
 
 echo "<hr>";
 $aa=30;
@@ -103,12 +65,27 @@ function dij()
 {
     global $aa;
     global $bb;
-    $zz= ($aa/$bb);
+    $zz= ($aa/$bb); // ili $aa /=$bb !
     echo $zz;
     
 }
 echo dij ();
 echo "<hr>";
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
 
 
 

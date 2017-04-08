@@ -1,5 +1,5 @@
 <?php
-
+/*
 echo "Klase i objekti<br>";
 
 class covjek{
@@ -85,6 +85,6 @@ interface Ikupac{
 	function ispis();
 }
 
-
+*/
 
 ?>
