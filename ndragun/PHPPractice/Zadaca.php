@@ -89,3 +89,5 @@ $bacanje = 0;
 	}
 }
 	echo "<p>Trebalo je {$bacanje} bacanja da bi dobili 3 Pisma zaredom!</p>";
+
+
