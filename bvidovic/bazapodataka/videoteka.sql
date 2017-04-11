@@ -35,3 +35,12 @@ CREATE TABLE `filmovi` (
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 ;
+CREATE TABLE `cjenik` (
+	`Sifra_cjenika` INT(11) NOT NULL,
+	`Kategorija` VARCHAR(30) NULL DEFAULT NULL,
+	`Cijena` FLOAT NULL DEFAULT NULL,
+	PRIMARY KEY (`Sifra_cjenika`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
