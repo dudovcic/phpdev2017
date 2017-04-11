@@ -16,43 +16,49 @@
 CREATE DATABASE IF NOT EXISTS `tvrtka` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `tvrtka`;
 
--- Dumping structure for table tvrtka.polaznici
-CREATE TABLE IF NOT EXISTS `polaznici` (
-  `sifra` int(5) NOT NULL AUTO_INCREMENT,
+-- Dumping structure for table tvrtka.zaposlenici
+CREATE TABLE IF NOT EXISTS `zaposlenici` (
+  `sifra_zaposlenika` int(5) NOT NULL AUTO_INCREMENT,
   `ime` varchar(25) NOT NULL,
   `prezime` varchar(25) NOT NULL,
-  `mjesto` varchar(55) NOT NULL,
-  PRIMARY KEY (`sifra`)
+  `sifra_odjela` varchar(5) NOT NULL,
+  PRIMARY KEY (`sifra_zaposlenika`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table tvrtka.polaznici: ~3 rows (approximately)
-/*!40000 ALTER TABLE `polaznici` DISABLE KEYS */;
-INSERT INTO `polaznici` (`sifra`, `ime`, `prezime`, `mjesto`) VALUES
-	(1, 'Ana', 'Milic', 'Zagreb'),
-	(2, 'Sanja', 'Tarak', 'Split'),
-	(3, 'Mladen', 'Gork', 'Osijek');
-/*!40000 ALTER TABLE `polaznici` ENABLE KEYS */;
+-- Dumping data for table tvrtka.zaposlenici: ~3 rows (approximately)
+/*!40000 ALTER TABLE `zaposlenici` DISABLE KEYS */;
+INSERT INTO `zaposlenici` (`sifra_zaposlenika`, `ime`, `prezime`, `sifra_odjela`) VALUES
+	(1, 'Ivo', 'Markic', 'P01'),
+	(2, 'Sanja', 'Tarak', 'N01'),
+	(3, 'Mladen', 'Gork', 'P01');
+/*!40000 ALTER TABLE `zaposlenici` ENABLE KEYS */;
 
--- Dumping structure for table tvrtka.tecajevi
-CREATE TABLE IF NOT EXISTS `tecajevi` (
-  `sifra_tecaja` varchar(5) NOT NULL,
-  `naziv_tecaja` varchar(55) NOT NULL
+-- Dumping structure for table tvrtka.odjeli
+CREATE TABLE IF NOT EXISTS `odjeli` (
+  `sifra_odjela` varchar(5) NOT NULL,
+  `naziv_odjela` varchar(55) NOT NULL,
+  `lokacija_odjela` varchar(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table tvrtka.tecajevi: ~0 rows (approximately)
-/*!40000 ALTER TABLE `tecajevi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tecajevi` ENABLE KEYS */;
+-- Dumping data for table tvrtka.odjeli: ~0 rows (approximately)
+/*!40000 ALTER TABLE `odjeli` DISABLE KEYS */;
+/*!40000 ALTER TABLE `odjeli` ENABLE KEYS */;
 
--- Dumping structure for table tvrtka.upisi
-CREATE TABLE IF NOT EXISTS `upisi` (
-  `sifra` int(10) NOT NULL,
-  `sifra_tecaja` int(10) NOT NULL
+-- Dumping structure for table tvrtka.sefovi
+CREATE TABLE IF NOT EXISTS `sefovi` (
+  `sifra_odjela` varchar(5) NOT NULL,
+  `sifra_zaposlenika` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table tvrtka.upisi: ~0 rows (approximately)
-/*!40000 ALTER TABLE `upisi` DISABLE KEYS */;
-/*!40000 ALTER TABLE `upisi` ENABLE KEYS */;
+-- Dumping data for table tvrtka.sefovi: ~0 rows (approximately)
+/*!40000 ALTER TABLE `sefovi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sefovi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+INSERT INTO `odjeli` (`sifra_odjela`, `naziv_odjela`, `lokacija_odjela`) VALUES
+  ('P01', 'Prodaja 1', 'Zagreb'),
+  ('N01', 'Nabava 1', 'Varazdin'),
+  ('P02', 'Prodaja 2', 'Split');
