@@ -30,3 +30,15 @@ CREATE TABLE `proizvod` (
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 ;
+CREATE TABLE `voditelji` (
+	`Sifra_radnika` INT(11) NOT NULL,
+	`Sifra_skladista` INT(11) NOT NULL,
+	PRIMARY KEY (`Sifra_radnika`, `Sifra_skladista`),
+	INDEX `Sifra_radnika` (`Sifra_radnika`),
+	INDEX `Sifra_skladista` (`Sifra_skladista`),
+	CONSTRAINT `Voditelji_ibfk_1` FOREIGN KEY (`Sifra_radnika`) REFERENCES `radnik` (`Sifra_radnika`),
+	CONSTRAINT `Voditelji_ibfk_2` FOREIGN KEY (`Sifra_skladista`) REFERENCES `skladisno_mjesto` (`Sifra_skladista`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
