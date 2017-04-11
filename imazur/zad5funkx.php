@@ -51,11 +51,10 @@ if  ($ff<$f) {
     mno($f, $g);
 }
 return $gg;
-
-       
     
 }
 echo mno (4,5);
+
 
 echo "<hr>";
 
