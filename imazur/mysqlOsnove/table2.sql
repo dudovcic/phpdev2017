@@ -15,7 +15,7 @@
 -- Dumping database structure for test
 CREATE DATABASE IF NOT EXISTS `test` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `test`;
-
+cc
 -- Dumping structure for table test.table2
 CREATE TABLE IF NOT EXISTS `table2` (
   `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
