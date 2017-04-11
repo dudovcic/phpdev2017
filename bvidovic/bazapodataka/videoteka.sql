@@ -10,3 +10,11 @@ CREATE TABLE `clanovi` (
 COLLATE='latin1_swedish_ci'
 ENGINE=InnoDB
 ;
+CREATE TABLE `zanr` (
+	`Sifra_zanra` INT(11) NOT NULL,
+	`Naziv` VARCHAR(30) NULL DEFAULT NULL,
+	PRIMARY KEY (`Sifra_zanra`)
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+;
