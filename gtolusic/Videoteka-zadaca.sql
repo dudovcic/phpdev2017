@@ -80,9 +80,9 @@ INSERT INTO `medij` (`medij`) VALUES
 -- Dumping structure for table Videoteka.posudba
 CREATE TABLE IF NOT EXISTS `posudba` (
   `Korisnik` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `Hit/-` char(50) NOT NULL DEFAULT '0',
-  `Film` char(50) NOT NULL DEFAULT '0',
-  `medij` char(50) NOT NULL DEFAULT '0',
+  `Hit/-` char(50) DEFAULT '0',
+  `Film` char(50) DEFAULT '0',
+  `medij` char(50) DEFAULT '0',
   `datum` char(50) DEFAULT '0',
   KEY `Korisnik` (`Korisnik`),
   KEY `FK_posudba_hit/obicni` (`Hit/-`),

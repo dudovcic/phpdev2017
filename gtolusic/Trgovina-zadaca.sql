@@ -19,10 +19,10 @@ USE `trgovina`;
 -- Dumping structure for table trgovina.gradja
 CREATE TABLE IF NOT EXISTS `gradja` (
   `materijal` char(55) NOT NULL,
-  `id_skladista` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_skladista` int(11) unsigned NOT NULL,
   KEY `FK_gradja_skladista` (`id_skladista`),
-  CONSTRAINT `FK_gradja_skladista` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  CONSTRAINT `FK5` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Dumping data for table trgovina.gradja: ~4 rows (approximately)
 /*!40000 ALTER TABLE `gradja` DISABLE KEYS */;

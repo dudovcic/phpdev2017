@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `odjeli` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table tvrtka.odjeli: ~1 rows (approximately)
+-- Dumping data for table tvrtka.odjeli: ~2 rows (approximately)
 /*!40000 ALTER TABLE `odjeli` DISABLE KEYS */;
 INSERT INTO `odjeli` (`id`, `odjeli`, `adresa`) VALUES
 	(1, 'odjel1', 'osijek'),
@@ -33,19 +33,20 @@ INSERT INTO `odjeli` (`id`, `odjeli`, `adresa`) VALUES
 
 -- Dumping structure for table tvrtka.radnici
 CREATE TABLE IF NOT EXISTS `radnici` (
+  `ID` int(11) NOT NULL,
   `Ime` char(50) NOT NULL,
   `prezime` char(50) NOT NULL,
   `adresa` char(50) NOT NULL,
-  `odjel` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `odjel` int(10) unsigned NOT NULL,
   KEY `odjel` (`odjel`),
   CONSTRAINT `FK_radnici_odjeli` FOREIGN KEY (`odjel`) REFERENCES `odjeli` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table tvrtka.radnici: ~0 rows (approximately)
+-- Dumping data for table tvrtka.radnici: ~2 rows (approximately)
 /*!40000 ALTER TABLE `radnici` DISABLE KEYS */;
-INSERT INTO `radnici` (`Ime`, `prezime`, `adresa`, `odjel`) VALUES
-	('goran', 'goranic', 'djakovo', 1),
-	('marko', 'markic', 'osijek', 2);
+INSERT INTO `radnici` (`ID`, `Ime`, `prezime`, `adresa`, `odjel`) VALUES
+	(2, 'goran', 'goranic', 'djakovo', 1),
+	(1, 'marko', 'markic', 'osijek', 2);
 /*!40000 ALTER TABLE `radnici` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
