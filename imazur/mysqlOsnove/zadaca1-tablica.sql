@@ -213,3 +213,27 @@ MariaDB [trgovina]>INSERT INTO `voditelji` (`ID`,`skladiste`, `ime`, `prezime`)
     -> (3,'skladiste1', 'eva','evo');
 Query OK, 3 rows affected (0.05 sec)
 Records: 3  Duplicates: 0  Warnings: 0
+
+INSERT INTO `skladiste1` (`ID`, `materijal`) VALUES
+    -> (1, 'cigle'),
+    -> (2, 'blokovi'),
+    -> (3, 'crijep'),
+    -> (4, 'daska'),
+    -> (5, 'greda');
+Query OK, 5 rows affected (0.16 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+MariaDB [trgovina]> INSERT INTO `skladiste2` (`ID`, `alat`) VALUES
+    -> (1, 'cekic'),
+    -> (2, 'busilica'),
+    -> (3, 'kutomjer'),
+    -> (4, 'klijesta');
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [trgovina]> INSERT INTO `skladiste3` (`ID`, `ostalo`) VALUES
+    -> (1, 'cavli'),
+    -> (2, 'vijci'),
+    -> (3, 'ljepilo');
+Query OK, 3 rows affected (0.05 sec)
+Records: 3  Duplicates: 0  Warnings: 0
