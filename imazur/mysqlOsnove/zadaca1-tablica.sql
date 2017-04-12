@@ -278,3 +278,37 @@ INSERT INTO `filmovi` (`oznaka_filma`, `naziv_filma`, `zanr
     -> (123, 'ratovi zvijezda', 'sf', 5,5),
     -> (223, 'james bond','akcija', 3, 5),
     -> (323, 'casablanca','drama', 5, 1);
+
+
+CREATE TABLE `članovi` (
+	`clanskiBR` INT(50) NOT NULL AUTO_INCREMENT,
+	`ime` VARCHAR(50) NOT NULL,
+	`prezime` VARCHAR(50) NOT NULL,
+	`adresa` VARCHAR(50) NOT NULL,
+	`telefon` VARCHAR(50) NOT NULL,
+	PRIMARY KEY (`clanskiBR`)
+)
+ENGINE=InnoDB
+AUTO_INCREMENT=10
+
+CREATE TABLE `žanr` (
+	`ID` INT(22) NOT NULL AUTO_INCREMENT,
+	`oznaka_filma` INT(22) NOT NULL DEFAULT '0',
+	`nazivz` VARCHAR(50) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`ID`),
+	INDEX `oznaka_filma` (`oznaka_filma`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+
+CREATE TABLE `posudba` (
+	`ID` INT(20) NOT NULL,
+	`clanskiBR` INT(20) NOT NULL,
+	`oznaka_filma` INT(20) NOT NULL,
+	`datum` DATE NOT NULL,
+	`zakasnina` VARCHAR(50) NOT NULL,
+	PRIMARY KEY (`ID`),
+	INDEX `clanskiBR` (`clanskiBR`),
+	INDEX `oznaka_filma` (`oznaka_filma`)
+)
+ENGINE=InnoDB
