@@ -25,19 +25,7 @@ CREATE TABLE IF NOT EXISTS `gradja` (
   CONSTRAINT `FK_gradja_skladista` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table trgovina.gradja: ~8 rows (approximately)
-/*!40000 ALTER TABLE `gradja` DISABLE KEYS */;
-INSERT INTO `gradja` (`id`, `materijal`, `id_skladista`) VALUES
-	(1, 'stolica', 1),
-	(2, 'stol', 2),
-	(3, 'lampe', 1),
-	(4, 'čavli', 2),
-	(5, 'daske', 3),
-	(6, 'ormari', 1),
-	(8, 'krevet', 1),
-	(7, 'posude', 2);
-/*!40000 ALTER TABLE `gradja` ENABLE KEYS */;
-
+-- Data exporting was unselected.
 -- Dumping structure for table trgovina.skladista
 CREATE TABLE IF NOT EXISTS `skladista` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -46,14 +34,7 @@ CREATE TABLE IF NOT EXISTS `skladista` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table trgovina.skladista: ~3 rows (approximately)
-/*!40000 ALTER TABLE `skladista` DISABLE KEYS */;
-INSERT INTO `skladista` (`id`, `skladiste`, `voditelj`) VALUES
-	(1, 'skladiste1', 'marko marković'),
-	(2, 'skladiste2', 'goran goranić'),
-	(3, 'skladiste3', 'ivan ivanić');
-/*!40000 ALTER TABLE `skladista` ENABLE KEYS */;
-
+-- Data exporting was unselected.
 -- Dumping structure for table trgovina.zaposlenici
 CREATE TABLE IF NOT EXISTS `zaposlenici` (
   `id` int(11) NOT NULL,
@@ -63,18 +44,7 @@ CREATE TABLE IF NOT EXISTS `zaposlenici` (
   CONSTRAINT `FK2` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table trgovina.zaposlenici: ~0 rows (approximately)
-/*!40000 ALTER TABLE `zaposlenici` DISABLE KEYS */;
-INSERT INTO `zaposlenici` (`id`, `zaposlenik`, `id_skladista`) VALUES
-	(1, 'Kristijan Krstić', 2),
-	(2, 'Ivica ivić', 3),
-	(3, 'Damir Damirković', 1),
-	(4, 'Toni Tonković', 1),
-	(5, 'Božo Božić', 2),
-	(6, 'Jura Jurić', 3),
-	(7, 'Igor Igić', 2);
-/*!40000 ALTER TABLE `zaposlenici` ENABLE KEYS */;
-
+-- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
