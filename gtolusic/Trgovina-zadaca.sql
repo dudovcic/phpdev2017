@@ -18,33 +18,54 @@ USE `trgovina`;
 
 -- Dumping structure for table trgovina.gradja
 CREATE TABLE IF NOT EXISTS `gradja` (
-  `id` int(11) NOT NULL,
   `materijal` char(55) NOT NULL,
   `id_skladista` int(11) unsigned NOT NULL AUTO_INCREMENT,
   KEY `FK_gradja_skladista` (`id_skladista`),
   CONSTRAINT `FK_gradja_skladista` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table trgovina.gradja: ~4 rows (approximately)
+/*!40000 ALTER TABLE `gradja` DISABLE KEYS */;
+INSERT INTO `gradja` (`materijal`, `id_skladista`) VALUES
+	('stolica', 1),
+	('stol', 1),
+	('lampa', 2),
+	('tepih', 2);
+/*!40000 ALTER TABLE `gradja` ENABLE KEYS */;
+
 -- Dumping structure for table trgovina.skladista
 CREATE TABLE IF NOT EXISTS `skladista` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `skladiste` char(55) NOT NULL,
   `voditelj` char(55) NOT NULL,
+  `adresa_skladista` char(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table trgovina.skladista: ~2 rows (approximately)
+/*!40000 ALTER TABLE `skladista` DISABLE KEYS */;
+INSERT INTO `skladista` (`id`, `skladiste`, `voditelj`, `adresa_skladista`) VALUES
+	(1, 'skladiste1', 'andro andric', 'osijek jug'),
+	(2, 'skladiste2', 'marko markic', 'osijek centar');
+/*!40000 ALTER TABLE `skladista` ENABLE KEYS */;
+
 -- Dumping structure for table trgovina.zaposlenici
 CREATE TABLE IF NOT EXISTS `zaposlenici` (
-  `id` int(11) NOT NULL,
   `zaposlenik` char(55) NOT NULL,
   `id_skladista` int(11) unsigned NOT NULL AUTO_INCREMENT,
   KEY `FK2` (`id_skladista`),
   CONSTRAINT `FK2` FOREIGN KEY (`id_skladista`) REFERENCES `skladista` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Data exporting was unselected.
+-- Dumping data for table trgovina.zaposlenici: ~4 rows (approximately)
+/*!40000 ALTER TABLE `zaposlenici` DISABLE KEYS */;
+INSERT INTO `zaposlenici` (`zaposlenik`, `id_skladista`) VALUES
+	('ante antic', 1),
+	('ivica ivić', 2),
+	('božo božić', 1),
+	('jura jurić', 2);
+/*!40000 ALTER TABLE `zaposlenici` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
