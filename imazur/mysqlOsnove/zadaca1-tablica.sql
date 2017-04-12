@@ -237,3 +237,44 @@ MariaDB [trgovina]> INSERT INTO `skladiste3` (`ID`, `ostalo`) VALUES
     -> (3, 'ljepilo');
 Query OK, 3 rows affected (0.05 sec)
 Records: 3  Duplicates: 0  Warnings: 0
+
+--------------------------------------------
+
+/*
+
+zadatak 2.3
+
+*/
+
+USE videoteka
+Database changed
+
+CREATE TABLE `filmovi` (`oznaka_filma` int(10) unsigned NOT
+ NULL AUTO_INCREMENT,
+    -> `naziv_filma` varchar(50) NOT NULL,
+    -> `zanr` varchar(50) NOT NULL,
+    -> `kolicinaDVD` int(50) NOT NULL,
+    -> `kolicinaBlueRay` int(50) NOT NULL,
+    -> PRIMARY KEY (`oznaka_filma`));
+
+CREATE TABLE `cjenik` (`ID`int(10) unsigned NOT NULL AUTO_I
+NCREMENT,
+    -> `vrsta` varchar(20) NOT NULL,
+    -> `cijena` varchar(20) NOT NULL,
+    -> PRIMARY KEY (`ID`)
+    -> );
+
+INSERT INTO `cjenik` (`ID`, `vrsta`, `cijena`) VALUES
+    -> (1, 'hitBlueRay', '12,00 kn'),
+    -> (2, 'hitDVD', '10,00 kn'),
+    -> (3, 'BlueRay', '9,00 kn'),
+    -> (4, 'DVD', '8,00 kn'),
+    -> (5, 'SBlueRay', '5,00 kn'),
+    -> (6, 'SDVD', '3,00 kn');
+Query OK, 6 rows affected (0.05 sec)
+
+INSERT INTO `filmovi` (`oznaka_filma`, `naziv_filma`, `zanr
+`, `kolicinaDVD`, `kolicinaBlueRay`) VALUES
+    -> (123, 'ratovi zvijezda', 'sf', 5,5),
+    -> (223, 'james bond','akcija', 3, 5),
+    -> (323, 'casablanca','drama', 5, 1);
