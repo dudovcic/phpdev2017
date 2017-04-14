@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `predmet` (
 INSERT INTO `predmet` (`Predmet_id`, `Predmet`, `Polozili`) VALUES
 	(145, 'tjelesni', '555555'),
 	(146, 'matematika', '777777, 666666'),
-	(192, 'astronomija', '777777');
+	(193, 'astronomija', '777777');
 /*!40000 ALTER TABLE `predmet` ENABLE KEYS */;
 
 -- Dumping structure for table fakultet.student
