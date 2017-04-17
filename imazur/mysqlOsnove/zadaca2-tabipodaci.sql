@@ -103,6 +103,32 @@ USE fakultet;
 SELECT DISTINCT imeStud
 FROM stud
 ORDER BY imeStud DESC;
+
+/*zadadtak 3.5.*/
+USE fakultet;
+SELECT mbrStud FROM ispit
+WHERE sifPred=146;
+
+/*zadadtak 3.6.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik,
+(koef+0.4)*800 AS 'placa'
+FROM nastavnik;
+
+/*zadadtak 3.7.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik,
+(koef+0.4)*800 AS 'placa'
+FROM nastavnik
+WHERE ((koef+0.4)*800<3500) OR ((koef+0.4)*800>8000);
+
+/*zadadtak 3.8.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+
 /*!40000 ALTER TABLE `upisi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
