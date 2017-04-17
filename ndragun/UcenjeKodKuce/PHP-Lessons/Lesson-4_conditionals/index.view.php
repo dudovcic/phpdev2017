@@ -32,9 +32,25 @@
                
            </li>
            
-           <li>
+           <li>   
                
-               <strong>Status: </strong> <?= $task['completed'] ? 'Completed' : 'Incompleted'; ?>
+               
+               <strong>Status: </strong>
+               
+               <?php
+               
+               if($task['completed']) {
+                   
+                   echo 'Complete';
+                   
+               } else {
+                   
+                   echo 'Incomplete';
+               }
+               
+               ?>
+               
+              <!-- <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?> SIMPLE WAY -->
                
            </li>
            
