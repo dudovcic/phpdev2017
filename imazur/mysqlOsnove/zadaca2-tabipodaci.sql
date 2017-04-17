@@ -84,6 +84,25 @@ INSERT INTO `upisi` (`sifra_polaznika`, `sifra_tecaja`) VALUES
 	(4, '001'),
 	(5, '002'),
 	(6, 'P01');
+
+
+
+/*zadadtak 3.2.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik 
+FROM nastavnik;
+
+/*zadadtak 3.3.*/
+USE fakultet;
+SELECT mbrStud,
+CONCAT (imeStud, ' ', prezStud) AS 'ime i prezime'
+FROM stud;
+
+/*zadadtak 3.4.*/
+USE fakultet;
+SELECT DISTINCT imeStud
+FROM stud
+ORDER BY imeStud DESC;
 /*!40000 ALTER TABLE `upisi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
