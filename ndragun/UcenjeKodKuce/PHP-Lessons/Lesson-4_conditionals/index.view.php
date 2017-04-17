@@ -41,7 +41,7 @@
                
                if($task['completed']) {
                    
-                   echo 'Complete';
+                   echo '&#9989; (Completed)';
                    
                } else {
                    
@@ -51,6 +51,29 @@
                ?>
                
               <!-- <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?> SIMPLE WAY -->
+               
+               
+               <!-- If we want to style we can use this way -->
+            <?php if($task['completed']) : ?>
+                   
+               <div><span class="icon">&#9989; (Completed)</span></div>
+                
+               
+            <?php else: ?>
+               
+               <div><span class="icon">Incomplete</span></div>
+               
+            <?php endif; ?>
+               
+               
+               <!-- If condition is false (!) -->
+               <?php
+               
+                    if(! $task['completed']) {
+                        echo 'Incomplete';
+                    }
+                    
+               ?>
                
            </li>
            
