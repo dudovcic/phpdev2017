@@ -129,6 +129,25 @@ FROM stud
 WHERE LEFT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
 AND RIGHT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
 
+/*zadadtak 3.9.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) NOT IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+/*zadadtak 3.10.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u');
+
+/*zadadtak 3.11.*/
+USE fakultet;
+SELECT * FROM stud
+WHERE imeStud LIKE '%nk%'
+OR prezStud LIKE '%nk%';
 /*!40000 ALTER TABLE `upisi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
