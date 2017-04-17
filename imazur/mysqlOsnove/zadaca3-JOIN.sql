@@ -8,3 +8,10 @@
  * Created: Apr 18, 2017
  */
 
+/*zadatak 3.12.*/
+USE fakultet;
+SELECT *
+FROM stud JOIN ispit
+ON stud.mbrStud=ispit.mbrStud
+AND ispit.ocjena=1
+AND ispit.sifPred BETWEEN 220 AND 240;
