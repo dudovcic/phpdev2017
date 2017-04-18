@@ -84,6 +84,70 @@ INSERT INTO `upisi` (`sifra_polaznika`, `sifra_tecaja`) VALUES
 	(4, '001'),
 	(5, '002'),
 	(6, 'P01');
+
+
+
+/*zadadtak 3.2.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik 
+FROM nastavnik;
+
+/*zadadtak 3.3.*/
+USE fakultet;
+SELECT mbrStud,
+CONCAT (imeStud, ' ', prezStud) AS 'ime i prezime'
+FROM stud;
+
+/*zadadtak 3.4.*/
+USE fakultet;
+SELECT DISTINCT imeStud
+FROM stud
+ORDER BY imeStud DESC;
+
+/*zadadtak 3.5.*/
+USE fakultet;
+SELECT mbrStud FROM ispit
+WHERE sifPred=146;
+
+/*zadadtak 3.6.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik,
+(koef+0.4)*800 AS 'placa'
+FROM nastavnik;
+
+/*zadadtak 3.7.*/
+USE fakultet;
+SELECT imeNastavnik, prezNastavnik,
+(koef+0.4)*800 AS 'placa'
+FROM nastavnik
+WHERE ((koef+0.4)*800<3500) OR ((koef+0.4)*800>8000);
+
+/*zadadtak 3.8.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+
+/*zadadtak 3.9.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) NOT IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+/*zadadtak 3.10.*/
+USE fakultet;
+SELECT *
+FROM stud
+WHERE LEFT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u')
+AND RIGHT(imeSTUD,1) IN ('a', 'e', 'i', 'o', 'u');
+
+/*zadadtak 3.11.*/
+USE fakultet;
+SELECT * FROM stud
+WHERE imeStud LIKE '%nk%'
+OR prezStud LIKE '%nk%';
 /*!40000 ALTER TABLE `upisi` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
