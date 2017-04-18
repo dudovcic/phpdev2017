@@ -1,7 +1,3 @@
 Neki tekst iz forme:
 
-<<<<<<< HEAD
--Evo malo tekstafghgfhfh
-=======
--Evo malo tekstaevo tea di je ovaj text?
->>>>>>> f9164f495feb63e926e64587606378d3ed1ccf21
+-Evo malo tekstaevo tea di je ovaj text?ggsdggrog
