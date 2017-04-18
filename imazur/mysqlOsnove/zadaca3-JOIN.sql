@@ -33,3 +33,29 @@ SELECT nazPred
 FROM pred LEFT JOIN ispit ON pred.sifPred=ispit.sifPred
 WHERE datispit is NULL
 ORDER BY nazPred;
+
+/*zadatak 3.16.*/
+USE fakultet;
+SELECT nazPred, oznDvorana FROM pred
+LEFT JOIN rezervacija 
+ON pred.sifPred=rezervacija.sifPred
+WHERE brojSatiTjedno>2;
+
+/*zadatak 3.17.*/
+USE fakultet;
+SELECT nazPred, nazOrgjed, upisanoStud FROM pred
+JOIN orgjed ON pred.sifOrgjed=orgjed.sifOrgjed
+WHERE upisanoStud>20;
+
+/*zadatak 3.18.*/
+USE fakultet;
+SELECT DISTINCT nazMjesto FROM mjesto
+JOIN stud ON mjesto.pbr=stud.pbrStan;
+
+/*zadatak 3.19.*/
+USE fakultet;
+SELECT imeStud, prezStud, nazPred, ocjena
+FROM ispit i
+JOIN stud s ON i.mbrStud=s.mbrStud
+JOIN pred p ON p.sifPred;
+
