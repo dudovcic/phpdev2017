@@ -170,7 +170,7 @@ WHERE DAY(ispit.datIspit) BETWEEN 10 AND 20;
 /*zadatak 5.7 */
 USE fakultet;
 SELECT nastavnik.imeNastavnik, nastavnik.prezNastavnik, m1.nazMjesto,
-			stud.imeStud, stud.prezStud, m2.nazMjesto
+	stud.imeStud, stud.prezStud, m2.nazMjesto
 FROM nastavnik
 JOIN ispit ON nastavnik.sifNastavnik=ispit.sifNastavnik
 JOIN mjesto m1 ON m1.pbr=nastavnik.pbrStan
