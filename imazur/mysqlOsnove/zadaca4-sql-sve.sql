@@ -125,3 +125,55 @@ FROM stud
 JOIN ispit ON ispit.mbrStud=stud.mbrStud
 JOIN pred ON ispit.sifPred=pred.sifPred
 JOIN nastavnik ON ispit.sifNastavnik=nastavnik.sifNastavnik;
+
+/*zadatak 5.1 */
+USE fakultet;
+SELECT stud.imeStud, stud.prezStud, mjesto.nazMjesto 
+FROM stud
+JOIN mjesto ON mjesto.pbr=stud.pbrRod
+WHERE LEFT(stud.imeStud,1)='F';
+
+/*zadatak 5.2 */
+USE fakultet;
+SELECT nastavnik.imeNastavnik, nastavnik.prezNastavnik, mjesto.nazMjesto
+FROM nastavnik
+JOIN mjesto ON mjesto.pbr=nastavnik.pbrStan
+WHERE SUBSTRING(mjesto.nazMjesto,1)='Z';
+
+/*zadatak 5.3 */
+USE fakultet;
+SELECT stud.imeStud, stud.prezStud, nastavnik.imeNastavnik, nastavnik.prezNastavnik
+FROM stud
+JOIN ispit ON ispit.mbrStud=stud.mbrStud
+JOIN nastavnik ON ispit.sifNastavnik=nastavnik.sifNastavnik
+WHERE 
+SUBSTRING(stud.imeStud,5,1)=SUBSTRING(nastavnik.imeNastavnik,5,1);
+
+/*zadatak 5.4 */
+USE fakultet;
+SELECT zupanija.nazZupanija FROM zupanija
+WHERE LENGTH(zupanija.nazZupanija) BETWEEN 13 AND 20;
+
+/*zadatak 5.5 */
+USE fakultet;
+SELECT stud.imeStud, stud.prezStud 
+FROM stud
+WHERE DATE_FORMAT(stud.datRodStud,'%M')='May';
+
+/*zadatak 5.6 */
+USE fakultet;
+SELECT DISTINCT stud.imeStud, stud.prezStud 
+FROM stud
+JOIN ispit ON stud.mbrStud=ispit.mbrStud
+WHERE DAY(ispit.datIspit) BETWEEN 10 AND 20;
+
+/*zadatak 5.7 */
+USE fakultet;
+SELECT nastavnik.imeNastavnik, nastavnik.prezNastavnik, m1.nazMjesto,
+			stud.imeStud, stud.prezStud, m2.nazMjesto
+FROM nastavnik
+JOIN ispit ON nastavnik.sifNastavnik=ispit.sifNastavnik
+JOIN mjesto m1 ON m1.pbr=nastavnik.pbrStan
+JOIN stud ON ispit.mbrStud=stud.mbrStud
+JOIN mjesto m2 ON m2.pbr=stud.pbrRod
+WHERE MONTH(ispit.datIspit)=6 AND m1.nazMjesto=m2.nazMjesto;
