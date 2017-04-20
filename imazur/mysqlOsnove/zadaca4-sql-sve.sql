@@ -86,3 +86,42 @@ FROM stud
 JOIN nastavnik ON nastavnik.prezNastavnik=stud.prezStud
 WHERE nastavnik.prezNastavnik=stud.prezStud;
 
+/*zadatak 4.1*/
+USE Upisi_polaznika;
+UPDATE tecajevi
+SET naziv_tecaja = 'osnove obrade teksta-ms word'
+WHERE naziv_tecaja='Microsoft Word';
+
+/*zadatak 4.2*/
+USE Upisi_polaznika;
+UPDATE upisi
+SET sifra_tecaja='O03'
+WHERE sifra_polaznika=6;
+
+/*zadatak 4.3*/
+USE Upisi_polaznika;
+DELETE FROM upisi
+WHERE sifra_tecaja='P01';
+
+/*zadatak 4.4*/
+USE fakultet;
+CREATE TABLE predmetidvorane
+SELECT rezervacija.oznDvorana, pred.nazPred, rezervacija.sat FROM pred
+JOIN rezervacija ON pred.sifPred=rezervacija.sifPred;
+
+/*zadatak 4.5*/
+USE fakultet;
+CREATE VIEW stanovanje AS
+SELECT nastavnik.imeNastavnik, nastavnik.prezNastavnik, mjesto.nazMjesto 
+FROM  nastavnik
+JOIN mjesto ON nastavnik.pbrStan=mjesto.pbr;
+
+
+/*zadatak 4.6*/
+USE fakultet;
+CREATE VIEW prolaznostispita AS
+SELECT stud.imeStud, stud.prezStud, pred.nazPred, ispit.ocjena, nastavnik.imeNastavnik, nastavnik.prezNastavnik
+FROM stud
+JOIN ispit ON ispit.mbrStud=stud.mbrStud
+JOIN pred ON ispit.sifPred=pred.sifPred
+JOIN nastavnik ON ispit.sifNastavnik=nastavnik.sifNastavnik;
