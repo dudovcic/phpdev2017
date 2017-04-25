@@ -29,8 +29,10 @@ exit;
 
     
 <?php
-print_r($_REQUEST);  
-
+echo'<pre>';
+      
+print_r($_POST);  
+echo'</pre>';
 ?>
 </html>
 
