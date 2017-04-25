@@ -73,7 +73,7 @@ mjesto.nazMjesto,
 mjesto.sifZupanija
 FROM stud INNER JOIN mjesto
 ON stud.pbrStan = mjesto.pbr
-ORDER BY stud.prezStud ASC, stud.imeStud ASC;studmjesto
+ORDER BY stud.prezStud ASC, stud.imeStud ASC;
 
 SELECT 
 stud.imeStud,
