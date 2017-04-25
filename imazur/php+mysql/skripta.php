@@ -6,7 +6,7 @@
 
 <?php
 for($i=0; $i<5; $i++){?>
-        <a href='skripta.php?broj=<?=$i?>'>1</a>
+        <a href="skripta.php?broj=<?php echo $i?>"><?php echo $i  ?></a>
 
 <?php } ?>
 
