@@ -144,6 +144,22 @@ if ( isset($_GET['no']) && $_GET['no'] == 8 ) {
 
 }
 
+if ( isset($_GET['no']) && $_GET['no'] == 9 ) {
 
+// serijalizacija objekta example
+
+class nesta {
+	private $name;
+	private $val;
+	function __construct($nm, $l) {
+		$this->name = $nm;
+		$this->l = $l;
+	}
+}
+
+$ne = new nesta("ime da ne", 11);
+
+echo serialize($ne);
+}
 
 
