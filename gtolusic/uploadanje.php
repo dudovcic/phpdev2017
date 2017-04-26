@@ -1,7 +1,7 @@
 
 <html>
 
-<?php   
+<?php   /*
 if (isset($_POST['submit']) || $_POST['broj']<=5)
 
 {for ($i=1;$i<=$_POST['broj'];$i++){
@@ -31,3 +31,5 @@ print_r($_FILES);
 
 
 ?>   </html>
+
+*/
