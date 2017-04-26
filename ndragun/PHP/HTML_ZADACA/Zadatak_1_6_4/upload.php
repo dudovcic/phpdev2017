@@ -1,4 +1,16 @@
+<?php
 
+if (isset($_REQUEST["fileno"]) == 0)
+{
+  header("Location: index.php");
+die();
+} 
+
+if (!file_exists('uploads')) {
+    mkdir('uploads', 0777, true);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="">
 <head>
