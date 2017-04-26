@@ -23,7 +23,9 @@ $_SESSION["var1"] = 1234;
 $_SESSION["var2"] = "Algebra";
 
 echo $_SESSION["var1"];
+echo "<hr>";
 echo $_SESSION["var2"];
+echo "<hr>";
 
 $var1 = $_SESSION["var1"];
 $var2 = $_SESSION["var2"];
@@ -39,9 +41,9 @@ setcookie('var1', '1234', time()+60);
 setcookie('var2', 'Algebra', time()+5*24*60*60);
 
 setcookie('var2', 'Algebra');
-echo "<hr>";
+echo "<hr> Cookies:";
 print_r($_COOKIE);
-echo "<hr>";
+echo "<hr> Cookies: ";
 echo $_COOKIE["var2"];
 
 function setcookielive($name, $value='', $expire)
@@ -49,7 +51,7 @@ function setcookielive($name, $value='', $expire)
     $_COOKIE[$name] = $value;
     return setcookie($name,$value,$expire);
 }
-echo "<hr>";
+echo "<hr> Cookies: ";
 setcookielive('naziv', 'Algebra', time()+60);
 
 echo $_COOKIE["naziv"];
