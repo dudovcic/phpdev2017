@@ -3,15 +3,15 @@
     <head>
 	<title>DZ 164</title>
 </head>
-
+<form method="POST" action="upload.php" enctype="multipart/form-data">
 <?php
 
 for($j=0;$j<$_POST["broj"];$j++)
 {
    ?>
-<form method="POST" action="upload.php" enctype="multipart/form-data" multiple>
 
-<br /> <input type="file" name="file[]" multiple /><br />
+
+<br /> <input type="file" name="file[]" /><br />
 
 <?php 
 

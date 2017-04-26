@@ -1,7 +1,7 @@
 <?php
 
 for($i=0;$i<$_POST["broj"];$i++){
-$target_dir = "uploads/";
+$target_dir = "D:\Podaci\programer\NetBeansProjects\phpdev2017\ipaic\upload1/";
 $target_file = $target_dir . basename($_FILES["file"]["name"][$i]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
