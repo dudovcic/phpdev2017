@@ -26,7 +26,7 @@ show();
 <a href="stranica2.php">odvedi me na stranicu2 </a>
 <br>
 <?php
-//$_SESSION['brojevi']=array(1,2656,52,355,325,355,65855);
+$_SESSION['brojevi']=array(1,2656,52,355,325,355,65855);
 if(isset($_SESSION['var1'])){
 echo $_SESSION['var1'];
 echo "<br>";
@@ -40,6 +40,7 @@ echo "<hr><pre>";
 //echo unserialize($_COOKIE['mojibrojevi']);
 //print_r(unserialize($_COOKIE['mojibrojevi']));
 echo "</pre>";
+
 function getcookie($name){
 return unserialize($_COOKIE[$name]);
 }
