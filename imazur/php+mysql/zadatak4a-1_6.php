@@ -1,7 +1,7 @@
 <html>
     <body>
         <form method="POST" action="zadatak4-1_6.php">
-    broj:<br/><input type="number" type="number" name="fajlovi" min="0" max="5" /><br/>
+    broj:<br/><input type="number" type="number" name="datoteke" min="0" max="5" /><br/>
     <br/>
     <input type="submit" name="submit_btn" value="Obrada" />
     </form>
