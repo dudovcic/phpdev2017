@@ -1,6 +1,6 @@
 <?php
 
-include("../../dbconn.php");
+include("db_connection.php");
 
 function begin()
 {
