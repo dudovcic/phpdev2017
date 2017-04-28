@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Lesson 1</title>
     
     <style>
     
         header{
+            background: #e3e3e3;
             padding: 2em;
             text-align: center;
         }
@@ -21,7 +22,11 @@
    <header>
        <h1>
            
-           <?= "Hello, " . htmlspecialchars($_GET['name'];) ?>
+           <?= $greeting ?>
+           
+           <!-- <?= "Hello, " . htmlspecialchars($_GET['name']); ?> -->
+           
+           <!-- EXAMPLE .php?name=nemanja -->
            
        </h1>
    </header>
