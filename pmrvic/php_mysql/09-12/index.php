@@ -11,40 +11,44 @@ include("dbconnect.php");
 
 <?php
 function begin(){
+    global $conn,$query;
     $query="BEGIN";
     $result= mysqli_query($conn, $query);
 }
 
 function commit(){
+    global $conn,$query;
     $query="COMMIT";
     $result = mysqli_query($conn,$query);
 }
 
 function rollback(){
+    global $conn,$query;
     $query="ROLLBACK";
     $result = mysqli_query($conn, $query);
 }
 
+// Pokrecemo transakciju
 begin();
 
 $error_num = 0;
 
-$query="INESRT INTO mjesto(pbr,nazMjesto,sifZupanija)";
-$query.="VALUES ('23000', 'Zadara', 13)";
+$query="INSERT INTO mjesto(pbr,nazMjesto,sifZupanija)";
+$query.=" VALUES ('99999', 'Zadara', 13)";
 $result = mysqli_query($conn, $query);
 
 if(!$result)
     $error_num++;
 
-$query="INSERT INTO mjestoo(pbr,nazMjesto,sifZupanija)";
-$query.="VALUES ('51000', 'Rijeka', '8')";
+$query="INSERT INTO mjesto(pbr,nazMjesto,sifZupanija)";
+$query.=" VALUES ('88888', 'Rijeka', '8')";
 $result = mysqli_query($conn, $query);
     
 if(!$result)
 $error_num++;
     
-$query="INSERT INTO mjestoo(pbr,nazMjesto,sifZupanija)";
-$query.="VALUES ('10000', 'Zagreb', '21')";
+$query="INSERT INTO mjesto(pbr,nazMjesto,sifZupanija)";
+$query.=" VALUES ('77777', 'Zagreb', '21')";
 $result = mysqli_query($conn, $query);
     
 if(!$result)
@@ -52,10 +56,12 @@ $error_num++;
 
 if($error_num <= 0){
     commit();
-echo 'uspjesno commit';}
-else{
-    rollback();
-    
+echo 'uspjesno commit';
+
+}
+else{  
+    echo 'Greška! negdje u querije, broj grešaka:'.$error_num;
+    rollback();   
 }
 ?>
 

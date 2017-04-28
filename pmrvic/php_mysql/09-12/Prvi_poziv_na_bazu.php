@@ -5,7 +5,7 @@
 <body class="text-center">
 
 <?php 
-include '..\..\dbconn.php';
+include '..\..\..\dbconn.php';
 error_reporting(0); 
 
 # Dohvaćanje filmova s početnim slovom $get iz paginacije
