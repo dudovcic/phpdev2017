@@ -81,8 +81,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]> USE trgovina
 Database changed
 
-MariaDB [trgovina]> CREATE TABLE `skladiste1` (`ID` INT(10) UNSIGNED NOT NULL AU
-TO_INCREMENT,
+MariaDB [trgovina]> CREATE TABLE `skladiste1` 
+    (`ID` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     ->  `materijal` VARCHAR(55) NOT NULL,
     -> PRIMARY KEY (`ID`)
     -> )
@@ -90,8 +90,8 @@ TO_INCREMENT,
     -> ;
 Query OK, 0 rows affected (0.28 sec)
 
-MariaDB [trgovina]> CREATE TABLE `skladiste2` (`ID` INT(10) UNSIGNED NOT NULL AU
-TO_INCREMENT,
+MariaDB [trgovina]> CREATE TABLE `skladiste2` 
+    (`ID` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     ->  `alat` VARCHAR(55) NOT NULL,
     -> PRIMARY KEY (`ID`)
     -> )
@@ -99,8 +99,8 @@ TO_INCREMENT,
     -> ;
 Query OK, 0 rows affected (0.42 sec)
 
-MariaDB [trgovina]> CREATE TABLE `skladiste3` (`ID` INT(10) UNSIGNED NOT NULL AU
-TO_INCREMENT,
+MariaDB [trgovina]> CREATE TABLE `skladiste3` 
+    (`ID` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     ->  `ostalo` VARCHAR(55) NOT NULL,
     ->
     -> PRIMARY KEY (`ID`)
