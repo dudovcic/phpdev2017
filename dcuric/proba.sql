@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 /**
- * Author:  Korisnik
- * Created: Apr 13, 2017
+ * Author:  Ćurić
+ * Created: 20.04.2017.
  */
 
-USE fakultet;
-SELECT mbrStud, CONCAT(imeStud,' ',prezStud) AS 'Ime i prezime' FROM stud;

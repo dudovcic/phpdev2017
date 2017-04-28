@@ -1,36 +1,29 @@
+<!doctype html>
+<html>
+    <head><title>Forma</title></head>
+    
+    <body>
+<form method ="POST" action="">
+    
+    ime: <br>
+    <input type='text' name='ime' >
+    <input type="submit" name='submit_btn' value='submit'>
+    
+    
+   
+</form>
+    </body>
+</html>
+
 <?php
 
-/*include "../pmrvic/data.php";
-
- if (is_file("../pmrvic/data.php"))
-  {echo "tu je";} 
-echo "<pre>";
-echo print_r($data);
-echo "</pre>";
-
-echo "<table border='1' style='width:500px'>";
-foreach ($data as $key => $data2) {
-
-
-
-
-
-
-    echo "<tr><td>"
+if(isset($_POST['submit_btn']))
+{
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
     
-    . $key 
-            . "</td><td>" 
-            . $data2['ime'] 
-            . "</td><td>" 
-            . $data2['prezime']
-            . "</td><td>" 
-            . $data2['datum']
-            . "</td>"
-            . "<td><form><select name='opcije'><option value='da'>DA</option><option value='ne'> NE</option></select></form>"
-            . "</td></tr>";
 }
-echo "</table>";
-?>*/
-
-
-
+    
+    
+?>
