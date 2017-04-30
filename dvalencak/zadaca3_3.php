@@ -7,24 +7,26 @@
         
         
         <?php
-         for ( $i = 1; $i <= 5; $i ++) 
+         for ( $i = 1; $i <= 5; $i++) 
            {
-	     echo "<a href='skripta.php?broj=$i'>$i</a><br>";
+	     echo "<a href='skripta.php?broj=".$i."'>".$i."</a><br>";
            }
          ?>
         <br>
        
    
-    </body>
-</html>
+    
 
        <?php 
-         if(  isset($_GET["broj"]))
+         if(  isset($_GET['broj']))
             {
- 		echo "Odabrali ste broj ". $_GET["broj"];
+ 		echo "Odabrali ste broj ". $_GET['broj'];
  	
  	    }
+            
             ?>
+    </body>
+</html>
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
