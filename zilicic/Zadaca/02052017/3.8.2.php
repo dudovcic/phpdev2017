@@ -1,6 +1,6 @@
 <?php
 
-//mysql_close
+//mysqli_close
 
 include("db_connection.php");
 if(mysqli_close($conn))

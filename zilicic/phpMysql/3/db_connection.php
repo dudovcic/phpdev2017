@@ -1,12 +1,12 @@
 <?php
 //prvi nacin
 /*
-$db=mysqli_connect('localhost','fakultet','fakultet');
+$db=mysql_connect('localhost','fakultet','fakultet');
 
 if($db)
 {
     echo 'Spojeni ste na bazu';
-    $db_selected=mysqli_select_db('fakultet',$db);
+    $db_selected=mysql_select_db('fakultet',$db);
     
     if($db_selected)
         echo 'Baza podataka je uspjesno odabrana';
@@ -23,7 +23,7 @@ if($db)
     $password="";
     $database="fakultet";
     
-    $db=mysqli_connect($server,$username,$password,$database);
+    $db=mysql_connect($server,$username,$password);
   /*  
     if($db)
     {
@@ -51,7 +51,8 @@ mysqli_set_charset($conn,"utf8");
 if($conn)
 {
 	mysqli_select_db($conn, $database);
-      }
+         echo 'Spojeni ste na bazu';
+}
 else
 {
 	echo 'Unable to connect to the database $database';

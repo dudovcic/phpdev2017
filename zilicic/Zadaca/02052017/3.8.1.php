@@ -1,6 +1,6 @@
 <?php
 
-//mysql_affected_rows
+//mysqli_affected_rows
 
 include("db_connection.php");
 $query="SELECT * FROM stud WHERE pbrStan=10040";
@@ -22,7 +22,10 @@ if($br_result<=0)
 }
  else 
      {
-while($student= mysqli_fetch_array($result))    
+while($student= mysqli_fetch_array($result,MYSQLI_NUM))    
 {
+    print_r($student);
+    echo '<br/>';
+}  
 }
-}
+
