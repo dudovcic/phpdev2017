@@ -4,6 +4,7 @@
 
 $spajanje=mysqli_connect('localhost', 'root','');
 $baza=mysqli_select_db($spajanje, 'fakultet');
+mysqli_set_charset($spajanje,"utf8");
 
 if ($spajanje && $baza)
     
