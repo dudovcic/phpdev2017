@@ -1,6 +1,5 @@
 <?php
 include 'db_connection.php';echo "<br>";
-
 //mysqli_affected_rows
 
 $guery = "select * from stud where pbrStan=10040";
@@ -20,7 +19,7 @@ if($br_result <= 0){
     echo "Ne postoji niti jedan rezultat";
 } else {
     
-    while ($student = mysqli_fetch_array($result)){
+    while ($student = mysqli_fetch_array($conn)){
         
     }
 }
@@ -40,5 +39,6 @@ if(mysqli_close($conn)){
    
 
 
-?>
 
+
+   ?>
