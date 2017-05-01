@@ -85,3 +85,9 @@ $result4=mysqli_query($spajanje, $query4);
                
 }
 echo "</table>";
+
+//peti zadatak
+
+$query5="select imestud from stud where imestud like 'a%'";
+$result5=mysqli_query($spajanje, $query5);
+echo "broj redaka:".mysqli_num_rows($result5);
