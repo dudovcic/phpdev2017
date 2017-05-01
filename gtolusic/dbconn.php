@@ -11,6 +11,7 @@ mysqli_set_charset($conn,"utf8");
 if($conn)
 {
 	mysqli_select_db($conn, $database);
+        echo "spojeni ste";
 }
 else
 {
