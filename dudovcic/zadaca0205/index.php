@@ -15,15 +15,15 @@ if ( $br_result <= 0 ) {
 	echo "Ne postoji niti jedan rezultat<br>";
 } else {
 	while ( $student = mysqli_fetch_array($result) ){
-		echo $student,"<br>";
+		echo print_r($student)."<br>";
 	}
 }
 
-// if ( mysqli_close($db) ) {
-// 	echo "Konekcija zatvorena";
-// } else {
-// 	echo "Doslo je do greskse";
-// }
+if ( mysqli_close($db) ) {
+	echo "Konekcija zatvorena";
+} else {
+	echo "Doslo je do greskse";
+}
 
 $query1 = "INSERT INTO dvorana ( oznDvorana, kapacitet) ";
 $query1 .= "VALUES('M2', '14')";
@@ -52,7 +52,7 @@ if( $br_result <= 0) {
 } else {
 
 	while ( $student = mysqli_fetch_array($result) ) {
-
+		echo $student."<br>";
 	}
 }
 
