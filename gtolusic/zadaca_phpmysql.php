@@ -51,3 +51,19 @@ echo "</table>";
 
 //treci zadatak
 
+
+$query3="select imestud,prezstud from stud where prezstud like 'b%' order by imestud ASC";
+$result3=mysqli_query($spajanje, $query3);
+
+{
+    
+  echo "<table border=1><tr><th>Ime</th><th>Prezime</th></tr>"
+    ;
+        while ($row3=mysqli_fetch_assoc($result3))
+       echo " <tr>
+        <td>".$row3['imestud']."</td>
+        <td>".$row3['prezstud']."</td>
+        </tr><br>";
+               
+}
+echo "</table>";
