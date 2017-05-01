@@ -67,3 +67,21 @@ $result3=mysqli_query($spajanje, $query3);
                
 }
 echo "</table>";
+
+//cetvrti zadatak
+
+$query4="select imestud, prezstud from stud inner join mjesto on mjesto.pbr=stud.pbrrod where mjesto.nazmjesto='Zagreb'";
+$result4=mysqli_query($spajanje, $query4);
+
+{
+    
+  echo "<table border=1><tr><th>Ime</th><th>Prezime</th></tr>"
+    ;
+        while ($row4=mysqli_fetch_assoc($result4))
+       echo " <tr>
+        <td>".$row4['imestud']."</td>
+        <td>".$row4['prezstud']."</td>
+        </tr><br>";
+               
+}
+echo "</table>";
