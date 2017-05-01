@@ -9,7 +9,8 @@ if ($spajanje && $baza)
     echo "uspješno ste spojeni na database <br>";
 
 else
-    echo "ništa to";
+{  echo "ništa to";
+die;}
 
 
 
@@ -91,3 +92,13 @@ echo "</table>";
 $query5="select imestud from stud where imestud like 'a%'";
 $result5=mysqli_query($spajanje, $query5);
 echo "broj redaka:".mysqli_num_rows($result5);
+echo "<br>";
+
+//šesti zadatak
+
+$query6="select count(preznastavnik) as brojnastavnika from nastavnik where preznastavnik like 'm%'";
+$result6=mysqli_query($spajanje, $query6);
+$broj=mysqli_fetch_assoc($result6);
+echo "broj prezimena koje počinju s m:".$broj['brojnastavnika'];
+
+
