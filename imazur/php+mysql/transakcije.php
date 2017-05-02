@@ -81,31 +81,34 @@ begin();
 
 $error_num=0;
 
-$query="INSER INTO mjesto(pbr,nazMjesto,sifZupanija)";
-$query.=" VALUES('23999','Zadar',13)";
-$result= mysqli_query($db,$query);
+$query="INSER INTO mjesto(pbr, nazMjesto, sifZupanija)";
+$query.=" VALUES ('23999', 'Zadarr', 13)";
+$result = mysqli_query($db,$query);
 
 if(!$result)
     $error_num++;
 
-$query="INSER INTO mjesto(pbr,nazMjesto,sifZupanija)";
-$query.=" VALUES('51999','Rijeka',8)";
-$result= mysqli_query($db,$query);
+$query="INSER INTO mjesto(pbr, nazMjesto, sifZupanija)";
+$query.=" VALUES ('51999', 'Rijekaa', 8)";
+$result = mysqli_query($db,$query);
 
 if(!$result)
     $error_num++;
 
-$query="INSER INTO mjesto(pbr,nazMjesto,sifZupanija)";
-$query.=" VALUES('10999','Zagreb',21)";
-$result= mysqli_query($db,$query);
+$query="INSER INTO mjesto(pbr, nazMjesto, sifZupanija)";
+$query.=" VALUES ('10999', 'Zagrebb', 21)";
+$result = mysqli_query($db,$query);
 
 if(!$result)
     $error_num++;
 
-if($error_num<=0)
+if($error_num<=0){
     commit();
-else     
+echo 'uspjesno commit';
+}
+else{ echo ' greska commit '.$error_num;    
     rollback();
+}
 
 
 /* 
