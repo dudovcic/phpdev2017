@@ -1,13 +1,6 @@
-<?php include 'new_mysqli.php'; ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-  
-    </head>
-    <body>
-      <?php
+<?php include 'new_mysqli.php'; 
+
+      
       //zad 3.10 Zadaci za ponavljanje ZAD 1
       $query_tpl =" SELECT mbrStud, prezStud FROM stud WHERE imeStud = ?";
       $imeStud = "Ivan";
@@ -26,8 +19,24 @@
           $mysqli->close();
           echo "<br>";
           echo "<br>";
+          
+          //zad 3.10 Zadaci za ponavljanje ZAD 2
+
+          include 'new_mysqli.php';
+          $query_tpl =" SELECT nazPred FROM pred order by nazPred asc";
+     if($stmt = $mysqli->prepare($query_tpl)){
+          $stmt->execute();
+          $stmt->bind_result($nazPred);
+          while($stmt->fetch()){
+          echo $nazPred ."<br>";
+          }
+          $stmt->close();
+       }
+          $mysqli->close();
+          echo "<br>";
+          echo "<br>";
+        
         ?>
         
        
-    </body>
-</html>
+  
