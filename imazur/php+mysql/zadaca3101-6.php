@@ -76,6 +76,31 @@ $stmt->bind_param('s', $naziv3);
 echo "<hr/>";
 
 //zadatak 3.10.4
+$query4="SELECT stud.imeStud, "
+        . "stud.prezStud "
+        . "FROM stud "
+        . "INNER JOIN mjesto "
+        . "ON stud.pbrRod=mjesto.pbr "
+        . "WHERE mjesto.nazMjesto "
+        . "LIKE ?";
+$naziv4 = 'Zagreb';
+
+if($stmt=$mysqli->prepare($query4)){
+$stmt->bind_param('s', $naziv4);
+	$stmt->execute();
+	
+	$stmt->bind_result($col4, $col44);
+	while($stmt->fetch()){
+		echo $col4;
+                echo " ";
+                echo $col44;
+		echo "<br/>";
+	}
+}
+
+
+
+
 ?>
 </body>
 </html>
