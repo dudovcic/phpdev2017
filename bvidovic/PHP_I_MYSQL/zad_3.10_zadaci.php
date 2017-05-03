@@ -35,6 +35,24 @@
           $mysqli->close();
           echo "<br>";
           echo "<br>";
+          
+          //zad 3.10 Zadaci za ponavljanje ZAD 3
+          include 'new_mysqli.php';
+          
+          $query_tpl =" SELECT  imeStud, prezStud FROM stud WHERE prezStud LIKE 'B%'";
+          $prez = 'B';
+     if($stmt = $mysqli->prepare($query_tpl)){
+          $stmt->bind_param('s', $prez);
+          $stmt->execute();
+          $stmt->bind_result($imeStud, $prezStud);
+          while($stmt->fetch()){
+          echo  $imeStud.' '. $prezStud."<br>";
+          }
+          $stmt->close();
+       }
+          $mysqli->close();
+          echo "<br>";
+          echo "<br>";
         
         ?>
         
