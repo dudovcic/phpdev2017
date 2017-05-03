@@ -53,6 +53,24 @@
           $mysqli->close();
           echo "<br>";
           echo "<br>";
+          
+          //zad 3.10 Zadaci za ponavljanje ZAD 4
+          include 'new_mysqli.php';
+        $query_tpl =" SELECT imestud, prezStud FROM stud WHERE pbrRod = 10000";
+        $pbr = "10000";
+      
+      if($stmt = $mysqli->prepare($query_tpl)){
+          $stmt->bind_param('s',$pbr);
+          $stmt->execute();
+          $stmt->bind_result($mbrStud, $prezStud);
+          while($stmt->fetch()){
+          echo $mbrStud.' '.$prezStud."<br>";
+          }
+          $stmt->close();
+       }
+          $mysqli->close();
+          echo "<br>";
+          echo "<br>";
         
         ?>
         
