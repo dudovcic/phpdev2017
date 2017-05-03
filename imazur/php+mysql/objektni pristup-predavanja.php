@@ -13,6 +13,7 @@ if($result=$mysqli->query($query)){
 		echo "<br/>";
 	}
 }
+
 /// vezani parametri strana 57
 $query_tpl="SELECT pbr FROM mjesto WHERE nazMjesto=?";
 $naziv="Zagreb";
