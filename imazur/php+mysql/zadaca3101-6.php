@@ -24,8 +24,32 @@ if($result=$mysqli->query($query)){
 }
 echo "<hr/>";
 
-//zadatak 3.10.2
 
+
+//zadatak 3.10.2
+$query1 = "SELECT pred.nazPred FROM pred ORDER BY nazPred";
+if($result1=$mysqli->query($query1)){
+	while ($row1=$result1->fetch_assoc()) {
+		echo $row1["nazPred"];
+                echo "<br/>";
+	}
+}
+echo "<hr/>";
+$query11 = "SELECT pred.nazPred "
+        . "FROM pred "
+        . "ORDER BY nazPred"
+        . " LIMIT 10";
+$naziv="";
+if($stmt=$mysqli->prepare($query11)){
+$stmt->bind_param('s', $naziv);
+	$stmt->execute();
+	
+	$stmt->bind_result($col1);
+	while($stmt->fetch()){
+		echo $col1;
+		echo "<br/>";
+	}
+}
 
 
 ?>
