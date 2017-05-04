@@ -120,6 +120,25 @@ if ( isset($_GET['id']) && $_GET['id'] == 4 ) {
 if ( isset($_GET['id']) && $_GET['id'] == 5 ) {
 	
 
+	$template = "SELECT imeStud FROM stud WHERE imeStud LIKE ?";
+	$ime = "A%";
+
+
+	if ( $stmt = $mysqli->prepare($template) ) {
+		$imeStud = 0;
+		$stmt->bind_param("s", $ime);
+		$stmt->execute();
+		$stmt->store_result();
+		
+		echo $stmt->num_rows;
+
+		$stmt->close();
+
+
+
+	}
+	$mysqli->close(); echo "<br><br><br>";
+
 
 }
 
