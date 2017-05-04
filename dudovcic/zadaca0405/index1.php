@@ -92,16 +92,17 @@ if ( isset($_GET['id']) && $_GET['id'] == 3 ) {
 
 if ( isset($_GET['id']) && $_GET['id'] == 4 ) {
 	
-	$template = "SELECT nazPred FROM pred ORDER BY nazPred ASC";
+	$template = "SELECT imeStud, prezStud FROM stud WHERE pbrRod=?";
+	$pbrRod = "10000";
 
 
 	if ( $stmt = $mysqli->prepare($template) ) {
-		$pred  = "";
-		// $stmt->bind_param("s", $ime);
+		$ime = ""; $prez = "";
+		$stmt->bind_param("s", $pbrRod);
 		$stmt->execute();
-		$stmt->bind_result($pred);
+		$stmt->bind_result($ime, $prez);
 		while ( $stmt->fetch() ) {
-			echo $pred ."<br>";
+			echo $ime, " ", $prez ."<br>";
 		}
 		$stmt->close();
 
