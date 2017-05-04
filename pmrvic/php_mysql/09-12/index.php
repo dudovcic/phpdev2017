@@ -63,6 +63,9 @@ else{
     echo 'Greška! negdje u querije, broj grešaka:'.$error_num;
     rollback();   
 }
+
+    
+
 ?>
 
 </body>
