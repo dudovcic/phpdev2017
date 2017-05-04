@@ -122,7 +122,9 @@ echo "<hr/>";
 
 //zadatak 3.10.5
 
-$query5 = "SELECT stud.imeStud FROM stud WHERE stud.imeStud like 'A%'";
+$query5 = "SELECT stud.imeStud "
+        . "FROM stud "
+        . "WHERE stud.imeStud LIKE 'A%'";
     $result5= mysqli_query ($mysqli, $query5);
   
 if ($stmt5 = $mysqli->prepare($query5)){
@@ -139,7 +141,27 @@ if ($stmt5 = $mysqli->prepare($query5)){
 
 $stmt5->close();
 }
+echo "<hr/>";
 
+//zadatak 3.10.6
+
+$query6 = "SELECT COUNT(nastavnik.prezNastavnik) as brojnastavnika "
+        . "FROM nastavnik "
+        . "WHERE nastavnik.prezNastavnik LIKE ?";
+    
+    $naziv6='m%';
+if ($stmt6 = $mysqli->prepare($query6)){
+    $stmt6->bind_param('s', $naziv6);
+        $stmt6->execute();
+    
+        $stmt6->bind_result($col6);
+    while ($stmt6->fetch()){
+        
+        echo $col6;
+        echo "<br>";
+    }
+     $stmt6->close();
+}
 
 ?>
 </body>
