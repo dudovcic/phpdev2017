@@ -23,8 +23,28 @@ if($result=$mysqli->query($query1)){
 	}
 }
 echo "<hr/>";
+//ili
 
-
+$query11 = "SELECT stud.mbrStud, "
+        . "stud.prezStud "
+        . "FROM stud "
+        . "WHERE stud.imeStud=?";
+ $naziv11="Ivan";
+ if ($stmt = $mysqli->prepare($query11)){
+     $stmt->bind_param('s', $naziv11);
+    $stmt->execute();
+    $stmt->bind_result($mbrstud, $prezstud);
+    while ($stmt->fetch()){
+            echo $mbrstud." ".$prezstud;
+            echo "<br>";
+     
+    }
+     $stmt->close();
+}
+ 
+ 
+echo "<br>";
+echo "<hr/>";
 
 //zadatak 3.10.2
 $query2 = "SELECT pred.nazPred FROM pred ORDER BY nazPred";
@@ -35,19 +55,19 @@ if($result1=$mysqli->query($query2)){
 	}
 }
 echo "<hr/>";
-
+// ili
 $query21 = "SELECT pred.nazPred "
         . "FROM pred "
         . "ORDER BY nazPred"
         . " LIMIT 10";
 $naziv="";
-if($stmt=$mysqli->prepare($query21)){
-$stmt->bind_param('s', $naziv);
-	$stmt->execute();
+if($stmt21=$mysqli->prepare($query21)){
+$stmt21->bind_param($naziv);
+	$stmt21->execute();
 	
-	$stmt->bind_result($col1);
-	while($stmt->fetch()){
-		echo $col1;
+	$stmt21->bind_result($naziv);
+	while($stmt21->fetch()){
+		echo $naziv;
 		echo "<br/>";
 	}
 }
@@ -98,7 +118,27 @@ $stmt->bind_param('s', $naziv4);
 	}
 }
 
+echo "<hr/>";
 
+//zadatak 3.10.5
+
+$query5 = "SELECT stud.imeStud FROM stud WHERE stud.imeStud like 'A%'";
+    $result5= mysqli_query ($mysqli, $query5);
+  
+if ($stmt5 = $mysqli->prepare($query5)){
+     
+        $stmt5->execute();
+        $stmt5->bind_result($col5);
+    while ($stmt5->fetch()){
+        
+        echo $col5;
+        echo "<br>";
+    }
+    
+    echo mysqli_num_rows($result5);
+
+$stmt5->close();
+}
 
 
 ?>
