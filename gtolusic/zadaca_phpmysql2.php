@@ -81,4 +81,22 @@ echo "<br>";
 
 //peti zadatak
 
+$query_tpl5 = "select imestud from stud where imestud like 'a%'";
+$result100= mysqli_query ($mysqli, $query_tpl5);
+
+
+if ($stmt5 = $mysqli->prepare($query_tpl5))
+{
+    
+        $stmt5->execute();
+    $stmt5->bind_result($imestud3);
+        while ($stmt5->fetch())
+    {echo $imestud3;
+        echo "<br>";
+    }
+   
+ echo mysqli_num_rows($result100);
+    $stmt5->close();
+}
+echo "<br>";
 
