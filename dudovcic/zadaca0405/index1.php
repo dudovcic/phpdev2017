@@ -63,6 +63,25 @@ if ( isset($_GET['id']) && $_GET['id'] == 2 ) {
 if ( isset($_GET['id']) && $_GET['id'] == 3 ) {
 	
 
+	$template = "SELECT imeStud, prezStud FROM stud WHERE prezStud LIKE ?";
+	$prez = "B%";
+
+
+	if ( $stmt = $mysqli->prepare($template) ) {
+		$ime  = ""; $prezStud = "";
+		$stmt->bind_param("s", $prez);
+		$stmt->execute();
+		$stmt->bind_result($ime, $prez);
+		while ( $stmt->fetch() ) {
+			echo $ime, " ", $prez ."<br>";
+		}
+		$stmt->close();
+
+
+
+	}
+	$mysqli->close(); echo "<br><br><br>";
+
 
 }
 
@@ -73,7 +92,23 @@ if ( isset($_GET['id']) && $_GET['id'] == 3 ) {
 
 if ( isset($_GET['id']) && $_GET['id'] == 4 ) {
 	
+	$template = "SELECT nazPred FROM pred ORDER BY nazPred ASC";
 
+
+	if ( $stmt = $mysqli->prepare($template) ) {
+		$pred  = "";
+		// $stmt->bind_param("s", $ime);
+		$stmt->execute();
+		$stmt->bind_result($pred);
+		while ( $stmt->fetch() ) {
+			echo $pred ."<br>";
+		}
+		$stmt->close();
+
+
+
+	}
+	$mysqli->close(); echo "<br><br><br>";
 
 }
 
