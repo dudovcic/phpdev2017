@@ -71,7 +71,45 @@
           $mysqli->close();
           echo "<br>";
           echo "<br>";
+          
+          //zad 3.10 Zadaci za ponavljanje ZAD 5
+          include 'new_mysqli.php';
+           
+          $query_tpl =" SELECT imestud FROM stud WHERE imeStud LIKE 'a%'";
+          $result= mysqli_query ($mysqli, $query_tpl);
+      
+       if($stmt = $mysqli->prepare($query_tpl)){
+          $stmt->execute();
+          $stmt->bind_result($imeStud);
         
+          echo"Broj studenata je:" . mysqli_num_rows($result);
+          $stmt->close();
+       }
+          $mysqli->close();
+          echo "<br>";
+          echo "<br>";
+           
+          //zad 3.10 Zadaci za ponavljanje ZAD 6
+          include 'new_mysqli.php';
+          
+          $query_tpl = "SELECT COUNT(preznastavnik) from nastavnik WHERE preznastavnik LIKE ?";
+          $prezime='m%';
+          if ($stmt = $mysqli->prepare($query_tpl))
+      {
+          $stmt->bind_param('s', $prezime);
+          $stmt->execute();
+          $stmt->bind_result($count);
+          while ($stmt->fetch())
+          {echo "Broj nastavnika je:".$count;
+          echo "<br>";
+          }
+          $stmt->close();
+          }
+          $mysqli->close();
+          
+          
+          
+          
         ?>
         
        
