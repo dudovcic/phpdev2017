@@ -1,7 +1,7 @@
 <?php
 
 $mysqli= new mysqli('127.0.0.1','root','','fakultet');
-
+mysqli_set_charset($mysqli,'utf8'); // bez ovoga su čudni znakovi?!
 if(mysqli_connect_errno()){
 	echo "Pogreška";
 	echo mysqli_connect_error();
@@ -23,8 +23,8 @@ $query_tpl="SELECT pbr FROM mjesto WHERE nazMjesto=?";
 
 $naziv="Zagreb";
 
-if ($stmt=$mysqli->prepare($query_tpl)){
-	$stmt->bind_param('s',$naziv);
+if ($stmt=$mysqli->prepare($query_tpl)){ // pripremamo predložak za unos varijabli
+	$stmt->bind_param('s',$naziv); // Postavljamo vrijednosti
 	$stmt->execute();
 
 $stmt->bind_result($pbr);
@@ -36,15 +36,17 @@ $stmt->close();
 
 /// vezani rezultat strana 59
 echo "<hr>";
+echo "vezani rezultat, bind_result()<br>";
 
-$query=<<<END
+// Ovo je blok koda od <<<END  <neki kod...> END 
+$query=<<<krajzavrsetakende
 SELECT pbr, nazMjesto FROM mjesto WHERE nazMjesto LIKE 'Zag%';
-END;
+krajzavrsetakende;
 
 if($stmt=$mysqli->prepare($query)){
 
 	$stmt->execute();
-	$stmt->bind_result($col1,$col2);
+	$stmt->bind_result($col1,$col2);  // proizvoljno nazovemo polja
 
 	while($stmt->fetch()){
 		echo $col1." ".$col2;
