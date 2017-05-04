@@ -34,6 +34,23 @@ if ( isset($_GET['id']) && $_GET['id'] == 1 ) {
 if ( isset($_GET['id']) && $_GET['id'] == 2 ) {
 	
 
+	$template = "SELECT nazPred FROM pred ORDER BY nazPred ASC";
+
+
+	if ( $stmt = $mysqli->prepare($template) ) {
+		$pred  = "";
+		// $stmt->bind_param("s", $ime);
+		$stmt->execute();
+		$stmt->bind_result($pred);
+		while ( $stmt->fetch() ) {
+			echo $pred ."<br>";
+		}
+		$stmt->close();
+
+
+
+	}
+	$mysqli->close(); echo "<br><br><br>";
 
 
 }
