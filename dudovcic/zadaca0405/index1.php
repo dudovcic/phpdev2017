@@ -150,6 +150,24 @@ if ( isset($_GET['id']) && $_GET['id'] == 5 ) {
 if ( isset($_GET['id']) && $_GET['id'] == 6 ) {
 	
 
+	$template = "SELECT COUNT(prezNastavnik) FROM nastavnik WHERE prezNastavnik LIKE ?" ;
+	$like = "M%";
+
+
+	if ( $stmt = $mysqli->prepare($template) ) {
+		$count = 0;
+		$stmt->bind_param("s", $like);
+		$stmt->execute();
+		$stmt->bind_result($count);
+		$stmt->fetch(); echo $count;
+		$stmt->close();
+
+
+
+	}
+	$mysqli->close(); echo "<br><br><br>";
+
+
 
 }
 
