@@ -100,3 +100,20 @@ if ($stmt5 = $mysqli->prepare($query_tpl5))
 }
 echo "<br>";
 
+//šesti zadatak
+
+$query_tpl6 = "select count(preznastavnik) as brojnastavnika from nastavnik where preznastavnik like ?";
+$m='m%';
+if ($stmt6 = $mysqli->prepare($query_tpl6))
+{
+    $stmt6->bind_param('s', $m);
+        $stmt6->execute();
+    $stmt6->bind_result($count);
+    while ($stmt6->fetch())
+    {echo $count;
+    echo "<br>";
+    }
+    $stmt6->close();
+}
+echo "<br>";
+
