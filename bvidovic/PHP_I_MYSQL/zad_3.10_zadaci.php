@@ -12,7 +12,7 @@
           $stmt->execute();
           $stmt->bind_result($mbrStud, $prezStud);
           while($stmt->fetch()){
-          echo $mbrStud ,$prezStud."<br>";
+          echo $mbrStud . $prezStud ."<br>";
           }
           $stmt->close();
        }
@@ -28,7 +28,7 @@
           $stmt->execute();
           $stmt->bind_result($nazPred);
           while($stmt->fetch()){
-          echo $nazPred ."<br>";
+          echo $nazPred . "<br>";
           }
           $stmt->close();
        }
@@ -60,7 +60,7 @@
         $pbr = "10000";
       
       if($stmt = $mysqli->prepare($query_tpl)){
-          $stmt->bind_param('s',$pbr);
+          $stmt->bind_param('s', $pbr);
           $stmt->execute();
           $stmt->bind_result($mbrStud, $prezStud);
           while($stmt->fetch()){
