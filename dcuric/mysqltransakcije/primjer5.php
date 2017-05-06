@@ -3,8 +3,8 @@
 include ("db_connection.php");
 
 $query1="SELECt imeStud,prezStud";
-$query1 .= "FROM stud";
-$query1 .="WHERE pbrStan=10000";
+$query1 .= " FROM stud";
+$query1 .=" WHERE pbrStan=10000";
 
 $result1= mysqli_query($conn,$query1);
 
